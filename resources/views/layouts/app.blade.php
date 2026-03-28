@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <x-seo.head :seo="$seo ?? []" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PKNCG7LHE"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R8LF3P9Z37"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-9PKNCG7LHE');
+        gtag('config', 'G-R8LF3P9Z37');
     </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9988246089680161" crossorigin="anonymous"></script>
     <link rel="icon" type="image/png" href="{{ asset('brand/favicon.png') }}">
