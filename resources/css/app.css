@@ -1,0 +1,160 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-display: 'Space Grotesk', 'Manrope', ui-sans-serif, system-ui, sans-serif;
+    --color-brand-blue: #1F4E8C;
+    --color-brand-green: #1FAE4B;
+    --color-brand-dark: #0B2A4A;
+    --color-brand-white: #FFFFFF;
+}
+
+@layer base {
+    :root {
+        color-scheme: light;
+        background:
+            radial-gradient(circle at top left, rgba(31, 78, 140, 0.08), transparent 24%),
+            radial-gradient(circle at top right, rgba(31, 174, 75, 0.08), transparent 20%),
+            linear-gradient(180deg, #ffffff 0%, #f6fbff 52%, #ffffff 100%);
+    }
+
+    body {
+        font-family: var(--font-sans);
+        background: #ffffff;
+        color: #0b2a4a;
+    }
+
+    ::selection {
+        background: rgba(31, 78, 140, 0.35);
+        color: #ffffff;
+    }
+}
+
+@layer components {
+    .page-shell {
+        @apply relative min-h-screen overflow-hidden;
+    }
+
+    .page-shell::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background:
+            radial-gradient(circle at 15% 20%, rgba(31, 78, 140, 0.08), transparent 25%),
+            radial-gradient(circle at 85% 15%, rgba(31, 174, 75, 0.07), transparent 18%),
+            radial-gradient(circle at 50% 100%, rgba(11, 42, 74, 0.05), transparent 35%);
+        z-index: 0;
+    }
+
+    .font-display {
+        font-family: var(--font-display);
+    }
+
+    .hero-surface {
+        background:
+            linear-gradient(180deg, rgba(31, 78, 140, 0.06), rgba(255, 255, 255, 0)),
+            radial-gradient(circle at top left, rgba(31, 78, 140, 0.08), transparent 28%);
+    }
+
+    .surface-panel {
+        @apply rounded-[2rem] border shadow-[0_18px_50px_rgba(11,42,74,0.08)] backdrop-blur-xl;
+        border-color: rgba(31, 78, 140, 0.12);
+        background: rgba(255, 255, 255, 0.95);
+    }
+
+    .eyebrow {
+        @apply text-xs font-semibold uppercase tracking-[0.24em];
+        color: #1f4e8c;
+    }
+
+    .section-title {
+        @apply font-display text-4xl font-semibold tracking-tight sm:text-5xl;
+        color: #0b2a4a;
+    }
+
+    .section-copy {
+        @apply max-w-2xl text-base leading-8;
+        color: rgba(11, 42, 74, 0.78);
+    }
+
+    .form-input {
+        @apply w-full rounded-2xl border bg-white px-4 py-3.5 outline-none transition focus:ring-2;
+        border-color: rgba(31, 78, 140, 0.18);
+        color: #0b2a4a;
+        box-shadow: 0 10px 24px rgba(11, 42, 74, 0.04);
+    }
+
+    .form-input::placeholder {
+        color: rgba(11, 42, 74, 0.5);
+    }
+
+    .form-input:focus {
+        border-color: rgba(31, 78, 140, 0.6);
+        --tw-ring-color: rgba(31, 78, 140, 0.18);
+    }
+
+    .btn-primary {
+        background-color: #1f4e8c;
+        color: #ffffff !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #1fae4b;
+        color: #ffffff !important;
+    }
+
+    .btn-primary * {
+        color: #ffffff !important;
+    }
+
+    .page-shell .text-white {
+        color: #0b2a4a !important;
+    }
+
+    .page-shell .text-slate-100,
+    .page-shell .text-slate-200,
+    .page-shell .text-slate-300 {
+        color: rgba(11, 42, 74, 0.78) !important;
+    }
+
+    .page-shell .text-slate-400,
+    .page-shell .text-slate-500 {
+        color: rgba(11, 42, 74, 0.56) !important;
+    }
+
+    .page-shell .bg-slate-900\/85,
+    .page-shell .bg-slate-900\/95,
+    .page-shell .bg-slate-950,
+    .page-shell .bg-slate-950\/40,
+    .page-shell .bg-slate-950\/70 {
+        background-color: rgba(255, 255, 255, 0.96) !important;
+    }
+
+    .page-shell .text-\[\#7fb0ff\],
+    .page-shell .text-\[\#9ff0ba\],
+    .page-shell .text-rose-300 {
+        color: #1f4e8c !important;
+    }
+
+    .page-shell .border-white\/10,
+    .page-shell .border-white\/8,
+    .page-shell .border-white\/12,
+    .page-shell .border-white\/15 {
+        border-color: rgba(31, 78, 140, 0.12) !important;
+    }
+
+    .page-shell .bg-white\/4,
+    .page-shell .bg-white\/5,
+    .page-shell .bg-white\/6,
+    .page-shell .bg-white\/7,
+    .page-shell .bg-white\/8 {
+        background-color: rgba(31, 78, 140, 0.04) !important;
+    }
+}
