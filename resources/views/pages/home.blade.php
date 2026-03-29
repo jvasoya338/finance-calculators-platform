@@ -23,20 +23,6 @@
                         </a>
                     </div>
 
-                    <div class="mt-10 grid gap-4 sm:grid-cols-3">
-                        <div class="rounded-3xl border border-[rgba(31,78,140,0.12)] bg-white p-5 shadow-[0_18px_40px_rgba(11,42,74,0.05)]">
-                            <p class="text-sm text-[rgba(11,42,74,0.56)]">Calculator categories</p>
-                            <p class="mt-2 text-3xl font-semibold text-[#0B2A4A]">{{ $categories->count() }}</p>
-                        </div>
-                        <div class="rounded-3xl border border-[rgba(31,78,140,0.12)] bg-white p-5 shadow-[0_18px_40px_rgba(11,42,74,0.05)]">
-                            <p class="text-sm text-[rgba(11,42,74,0.56)]">Launch-ready tools</p>
-                            <p class="mt-2 text-3xl font-semibold text-[#0B2A4A]">{{ \App\Support\CalculatorCatalog::all()->count() }}</p>
-                        </div>
-                        <div class="rounded-3xl border border-[rgba(31,78,140,0.12)] bg-white p-5 shadow-[0_18px_40px_rgba(11,42,74,0.05)]">
-                            <p class="text-sm text-[rgba(11,42,74,0.56)]">UX priorities</p>
-                            <p class="mt-2 text-3xl font-semibold text-[#0B2A4A]">SEO + speed</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="relative">
