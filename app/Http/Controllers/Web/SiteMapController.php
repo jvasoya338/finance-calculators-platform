@@ -20,6 +20,8 @@ class SiteMapController extends Controller
             route('terms'),
             route('disclaimer'),
         ])->merge(
+            collect(array_keys(config('guides')))->map(fn (string $guide) => route('guides.show', ['guide' => $guide]))
+        )->merge(
             collect(array_keys(config('finance.regional_pages')))->map(fn (string $region) => route('regional.show', ['region' => $region]))
         )->merge(
             CalculatorCatalog::categories()->map(fn (array $category) => route('categories.show', ['category' => $category['slug']]))

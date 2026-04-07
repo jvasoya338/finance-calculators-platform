@@ -103,4 +103,15 @@ class SitePagesTest extends TestCase
             ->assertOk()
             ->assertSee('Important disclaimer');
     }
+
+    public function test_guide_pages_are_available(): void
+    {
+        $this->get(route('guides.index'))
+            ->assertOk()
+            ->assertSee('Guide article');
+
+        $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
+            ->assertOk()
+            ->assertSee('How to compare mortgage offers without focusing on rate alone');
+    }
 }

@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class)->name('home');
 Route::get('/calculators', [CalculatorController::class, 'index'])->name('calculators.index');
 Route::get('/guides', [GuideController::class, 'index'])->name('guides.index');
+Route::get('/guides/{guide}', [GuideController::class, 'show'])
+    ->whereIn('guide', array_keys(config('guides')))
+    ->name('guides.show');
 Route::get('/{region}', [RegionalPageController::class, 'show'])
     ->whereIn('region', array_keys(config('finance.regional_pages')))
     ->name('regional.show');

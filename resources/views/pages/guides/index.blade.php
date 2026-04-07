@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="surface-panel p-6 sm:p-8">
-                <h2 class="font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Planned guide types</h2>
+                <h2 class="font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">What this library covers</h2>
                 <ul class="mt-6 space-y-4 text-sm leading-7 text-[rgba(11,42,74,0.72)]">
                     <li>Mortgage affordability explainers and repayment strategy content.</li>
                     <li>Investment planning guides tied to SIP, compound growth, and retirement tools.</li>
@@ -46,21 +46,14 @@
         </div>
 
         <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            <article class="surface-panel p-6">
-                <p class="eyebrow">Guide topic</p>
-                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">How to compare mortgage offers</h3>
-                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A content slot for detailed comparisons, repayment examples, and links back to mortgage tools.</p>
-            </article>
-            <article class="surface-panel p-6">
-                <p class="eyebrow">Guide topic</p>
-                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">Understanding compounding across time horizons</h3>
-                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A long-form explainer that can support investment and retirement calculator journeys.</p>
-            </article>
-            <article class="surface-panel p-6">
-                <p class="eyebrow">Guide topic</p>
-                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">A practical monthly budgeting framework</h3>
-                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">An educational page to pair with the budget and expense planning tools.</p>
-            </article>
+            @foreach($guides as $guide)
+                <a href="{{ route('guides.show', ['guide' => $guide['slug']]) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.35)] hover:bg-[rgba(31,78,140,0.02)]">
+                    <p class="eyebrow">Guide article</p>
+                    <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">{{ $guide['title'] }}</h2>
+                    <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $guide['meta_description'] }}</p>
+                    <span class="mt-5 inline-flex items-center text-sm font-semibold text-[#1F4E8C]">Read guide →</span>
+                </a>
+            @endforeach
         </div>
     </section>
 @endsection
