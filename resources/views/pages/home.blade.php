@@ -141,19 +141,19 @@
                 <div class="grid gap-4 sm:grid-cols-2">
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
                         <p class="text-sm font-semibold text-[#0B2A4A]">SEO-ready structure</p>
-                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Unique metadata, FAQ schema, breadcrumbs, canonical tags, internal links, and a sitemap route.</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Clear category hubs, strong internal links, and informative calculator pages help users discover the right tool faster.</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
                         <p class="text-sm font-semibold text-[#0B2A4A]">Reusable engine</p>
-                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Calculator pages share a common registry, validation flow, and result presentation layer.</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Consistent results, formulas, and navigation make it easier to move between loan, tax, investing, and budgeting decisions.</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
                         <p class="text-sm font-semibold text-[#0B2A4A]">Mobile-first UI</p>
                         <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Every page is optimized for clarity, touch-friendly inputs, and reduced visual noise.</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
-                        <p class="text-sm font-semibold text-[#0B2A4A]">AdSense-ready later</p>
-                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">The layout leaves room for ads and sponsorships without making the site feel cluttered or ad-heavy.</p>
+                        <p class="text-sm font-semibold text-[#0B2A4A]">Global usability</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Country-aware defaults, broad finance language, and regional hubs make the platform easier to use across markets.</p>
                     </div>
                 </div>
             </div>
@@ -176,9 +176,9 @@
             </div>
             <div>
                 <p class="eyebrow">SEO intro</p>
-                <h2 class="section-title mt-4">A finance content foundation that can grow into hundreds of pages</h2>
+                <h2 class="section-title mt-4">A finance resource built for both calculations and better decisions</h2>
                 <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">
-                    FinguruTools is structured like a premium financial product site: clear categories, robust internal linking, rich metadata, and flexible calculator templates. That makes it ideal for scaling into a larger publishing platform with explainers, comparisons, country-specific calculators, and long-form finance guides.
+                    Good finance tools should do more than output a number. FinguruTools pairs calculations with plain-language explanations, related guides, regional hubs, and connected planning flows so people can understand what the result means before acting on it.
                 </p>
                 <div class="mt-8 rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-6 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
                     <h3 class="text-lg font-semibold text-[#0B2A4A]">Frequently asked questions</h3>
@@ -188,8 +188,8 @@
                             <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">No. The site is written for a worldwide audience and uses flexible assumptions where local rules vary.</p>
                         </div>
                         <div class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-4">
-                            <p class="font-semibold text-[#0B2A4A]">Can the platform grow into a blog-driven SEO site?</p>
-                            <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Yes. The guides section and metadata architecture are built to support a growing finance content library.</p>
+                            <p class="font-semibold text-[#0B2A4A]">Do the pages explain the result, or only show numbers?</p>
+                            <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">The platform combines formulas, FAQs, planning notes, related calculators, and deeper guide content so each tool is easier to use in real life.</p>
                         </div>
                     </div>
                 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Support\CalculatorCatalog;
+use App\Support\CalculatorEditorial;
 use App\Support\SeoData;
 use Illuminate\View\View;
 
@@ -24,6 +25,7 @@ class CategoryController extends Controller
         return view('pages.calculators.category', [
             'seo' => SeoData::forCategory($page, $breadcrumbs),
             'category' => $page,
+            'editorial' => CalculatorEditorial::forCategory($page),
             'breadcrumbs' => $breadcrumbs,
         ]);
     }

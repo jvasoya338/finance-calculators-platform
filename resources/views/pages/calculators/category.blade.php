@@ -10,7 +10,12 @@
                 <p class="section-copy mt-4">{{ $category['headline'] }}</p>
             </div>
             <div class="surface-panel p-6 sm:p-8">
-                <p class="text-sm leading-7 text-slate-300">{{ $category['description'] }}</p>
+                <p class="text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $category['description'] }}</p>
+                <ul class="mt-5 space-y-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">
+                    @foreach($editorial['planning_points'] as $point)
+                        <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-4 py-3">{{ $point }}</li>
+                    @endforeach
+                </ul>
             </div>
         </div>
 
@@ -19,5 +24,20 @@
                 <x-calculator.card :calculator="$calculator" />
             @endforeach
         </div>
+
+        @if($editorial['guide_links']->isNotEmpty())
+            <section class="mt-12 surface-panel p-6 sm:p-8">
+                <p class="eyebrow">Related guides</p>
+                <h2 class="section-title mt-4">Broader reading for {{ strtolower($category['name']) }}</h2>
+                <div class="mt-6 grid gap-4 md:grid-cols-2">
+                    @foreach($editorial['guide_links'] as $guide)
+                        <a href="{{ route('guides.show', ['guide' => $guide['slug']]) }}" class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5 transition hover:border-[rgba(31,78,140,0.35)] hover:bg-[rgba(31,78,140,0.05)]">
+                            <h3 class="text-lg font-semibold text-[#0B2A4A]">{{ $guide['title'] }}</h3>
+                            <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $guide['meta_description'] }}</p>
+                        </a>
+                    @endforeach
+                </div>
+            </section>
+        @endif
     </section>
 @endsection

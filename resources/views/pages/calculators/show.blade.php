@@ -61,14 +61,50 @@
         <div class="mt-14 grid gap-8 xl:grid-cols-[1.1fr,0.9fr]">
             <div class="space-y-8">
                 <section class="surface-panel p-6 sm:p-8">
-                    <p class="eyebrow">Formula and method</p>
-                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">How the {{ strtolower($calculator['title']) }} works</h2>
-                    <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">{{ $calculator['formula'] }}</p>
+                    <p class="eyebrow">How it works</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">What this {{ strtolower($calculator['title']) }} is showing you</h2>
+                    <div class="mt-5 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                        @foreach($editorial['overview'] as $paragraph)
+                            <p>{{ $paragraph }}</p>
+                        @endforeach
+                    </div>
+                    <div class="mt-6 rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
+                        <p class="text-sm font-semibold text-[#0B2A4A]">Calculation method</p>
+                        <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $calculator['formula'] }}</p>
+                    </div>
                 </section>
 
                 <section class="surface-panel p-6 sm:p-8">
-                    <p class="eyebrow">Why use this tool</p>
-                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Use cases and planning benefits</h2>
+                    <p class="eyebrow">Input planning</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Inputs that matter most</h2>
+                    <div class="mt-6 grid gap-4 md:grid-cols-2">
+                        @foreach($editorial['input_highlights'] as $highlight)
+                            <article class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4">
+                                <h3 class="text-base font-semibold text-[#0B2A4A]">{{ $highlight['title'] }}</h3>
+                                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $highlight['body'] }}</p>
+                            </article>
+                        @endforeach
+                    </div>
+                </section>
+
+                <section class="surface-panel p-6 sm:p-8">
+                    <p class="eyebrow">Planning guidance</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">How to read the result well</h2>
+                    <div class="mt-5 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                        @foreach($editorial['interpretation'] as $paragraph)
+                            <p>{{ $paragraph }}</p>
+                        @endforeach
+                    </div>
+                    <ul class="mt-6 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                        @foreach($editorial['tips'] as $tip)
+                            <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4">{{ $tip }}</li>
+                        @endforeach
+                    </ul>
+                </section>
+
+                <section class="surface-panel p-6 sm:p-8">
+                    <p class="eyebrow">Why people use this tool</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Common use cases and benefits</h2>
                     <ul class="mt-6 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
                         @foreach($calculator['benefits'] as $benefit)
                             <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4">{{ $benefit }}</li>
@@ -76,14 +112,20 @@
                     </ul>
                 </section>
 
-                <section class="surface-panel p-6 sm:p-8">
-                    <p class="eyebrow">SEO content</p>
-                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">{{ $calculator['title'] }} guide</h2>
-                    <div class="mt-5 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
-                        <p>{{ $calculator['title'] }} pages should do more than show a number. This page combines the calculation interface with explanatory content, formula transparency, frequently asked questions, and related internal links so the experience works for both users and search visibility.</p>
-                        <p>Because the platform is built for a worldwide audience, the language stays broad and adaptable wherever country-specific policies or regulations differ. That keeps the user experience clean today while preserving room for localized enhancements later.</p>
-                    </div>
-                </section>
+                @if($editorial['related_guides']->isNotEmpty())
+                    <section class="surface-panel p-6 sm:p-8">
+                        <p class="eyebrow">Related reading</p>
+                        <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Go deeper with practical guides</h2>
+                        <div class="mt-6 grid gap-4 md:grid-cols-2">
+                            @foreach($editorial['related_guides'] as $guide)
+                                <a href="{{ route('guides.show', ['guide' => $guide['slug']]) }}" class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5 transition hover:border-[rgba(31,78,140,0.35)] hover:bg-[rgba(31,78,140,0.05)]">
+                                    <h3 class="text-lg font-semibold text-[#0B2A4A]">{{ $guide['title'] }}</h3>
+                                    <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $guide['meta_description'] }}</p>
+                                </a>
+                            @endforeach
+                        </div>
+                    </section>
+                @endif
             </div>
 
             <div class="space-y-8">

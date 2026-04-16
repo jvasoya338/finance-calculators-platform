@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CalculatorInputRequest;
 use App\Services\Calculators\CalculatorService;
 use App\Support\CalculatorCatalog;
+use App\Support\CalculatorEditorial;
 use App\Support\CountryContext;
 use App\Support\SeoData;
 use Illuminate\View\View;
@@ -54,6 +55,7 @@ class CalculatorController extends Controller
         return view('pages.calculators.show', [
             'seo' => SeoData::forCalculator($page, $breadcrumbs),
             'calculator' => $page,
+            'editorial' => CalculatorEditorial::forCalculator($page),
             'formValues' => array_merge([
                 'country' => $countryContext->current()['tax_model'] ?? null,
             ], $payload),
