@@ -283,4 +283,192 @@ return [
         ],
         'related_calculators' => ['savings-calculator', 'budget-calculator', 'expense-calculator'],
     ],
+    'choosing-loan-term' => [
+        'slug' => 'choosing-loan-term',
+        'title' => 'How to Choose the Right Loan Term',
+        'meta_title' => 'How to Choose the Right Loan Term | FinguruTools',
+        'meta_description' => 'Learn how to choose the right loan term by balancing monthly affordability, total interest, and financial flexibility.',
+        'headline' => 'How to choose the right loan term without focusing only on the monthly payment',
+        'intro' => 'Loan term choices can quietly change the whole cost of borrowing. A longer repayment period often looks easier because the monthly payment drops, but the total interest paid can rise sharply. A shorter term usually reduces long-term cost, but it increases monthly pressure. The right answer is not always the shortest or longest option. It is the term that keeps the loan affordable while avoiding unnecessary interest drag.',
+        'sections' => [
+            [
+                'heading' => 'Monthly comfort matters, but it is not the only metric',
+                'body' => [
+                    'Many borrowers compare loan options by looking at the monthly payment first. That is reasonable because monthly cash flow determines whether the loan is workable inside everyday life. But two repayment terms that look close in payment size can still produce meaningfully different total costs.',
+                    'The better approach is to review both affordability and lifetime cost together. A loan should fit your budget now without quietly becoming much more expensive than necessary over time.',
+                ],
+            ],
+            [
+                'heading' => 'Shorter terms reduce interest, but reduce flexibility too',
+                'body' => [
+                    'A shorter loan term repays principal faster, which means interest has less time to accumulate. That usually makes it cheaper overall. The tradeoff is that monthly obligations increase, leaving less room for savings, emergencies, or other goals.',
+                    'This is why the cheapest loan on paper is not always the strongest choice in practice. If the payment pushes your budget too hard, the financial stress can outweigh the theoretical interest savings.',
+                ],
+            ],
+            [
+                'heading' => 'Use scenario testing before deciding',
+                'body' => [
+                    'The smartest way to choose a loan term is to compare at least three realistic scenarios. For example, test a shorter term, a middle option, and a longer term. Then compare monthly payment, total interest, and how much monthly breathing room remains after other obligations.',
+                    'This process turns the decision from guesswork into a structured comparison. You will often find that one term gives a much better balance between affordability and long-term cost than the others.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Do not choose a term based only on the lowest monthly payment.',
+            'Compare affordability and total interest together before borrowing.',
+            'Use multiple scenarios to find a term that is sustainable and not unnecessarily expensive.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Is a shorter loan term always better?',
+                'answer' => 'Not always. It often lowers total interest, but it can also create too much monthly pressure if the payment is aggressive for your budget.',
+            ],
+            [
+                'question' => 'What is the safest way to compare loan terms?',
+                'answer' => 'Test at least a few realistic term options and compare monthly payment, total repayment, and the room left in your monthly budget.',
+            ],
+        ],
+        'related_calculators' => ['loan-calculator', 'emi-calculator', 'car-loan-calculator'],
+    ],
+    'down-payment-vs-cash-reserves' => [
+        'slug' => 'down-payment-vs-cash-reserves',
+        'title' => 'How to Balance Down Payment Size and Cash Reserves',
+        'meta_title' => 'How to Balance Down Payment Size and Cash Reserves | FinguruTools',
+        'meta_description' => 'Learn how to balance a larger down payment against the need to keep cash reserves for repairs, moving, and emergencies.',
+        'headline' => 'How to balance a larger down payment with the need to keep cash reserves',
+        'intro' => 'A larger down payment can lower borrowing costs, but using too much cash upfront can leave you exposed right after the purchase. This tradeoff is especially important with homes, where repairs, moving expenses, furnishing, and emergency costs often appear soon after the transaction.',
+        'sections' => [
+            [
+                'heading' => 'A larger down payment can improve the loan math',
+                'body' => [
+                    'When you pay more upfront, the financed amount falls. That can reduce the monthly payment, lower the total interest paid, and in some markets help you qualify for better lending terms. From a calculator perspective, larger down payments usually make the borrowing side look stronger.',
+                    'That benefit is real, but it should not be evaluated in isolation. Lower borrowing cost is helpful only if you still have enough liquidity after the deal closes.',
+                ],
+            ],
+            [
+                'heading' => 'Cash reserves protect the months after purchase',
+                'body' => [
+                    'A purchase can go smoothly on paper and still create stress immediately afterward if reserves are too low. A broken appliance, moving cost, legal fee, or temporary income disruption can become much harder to absorb when all available cash has been used in the down payment.',
+                    'Reserves create resilience. They give you time and flexibility when real-life costs appear, which is why aggressive down-payment strategies are not always the strongest decision.',
+                ],
+            ],
+            [
+                'heading' => 'Use the calculator to compare both sides of the tradeoff',
+                'body' => [
+                    'The best approach is to test multiple down-payment levels and compare how much monthly benefit each one actually creates. Then place that benefit next to the amount of liquidity you would still hold after the purchase. Sometimes a moderate down payment creates a much healthier balance between affordability and resilience.',
+                    'This is not only a finance formula question. It is also a risk-management question. The best choice is the one that reduces long-term strain rather than maximizing one metric alone.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Larger down payments usually improve monthly cost and total interest.',
+            'Cash reserves matter because real post-purchase costs often arrive quickly.',
+            'Compare down-payment scenarios against both affordability and remaining liquidity.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Should I put all available cash into the down payment?',
+                'answer' => 'Usually no. It is often safer to keep a reasonable reserve for repairs, moving costs, and emergencies after the purchase.',
+            ],
+            [
+                'question' => 'How can I compare down payment options well?',
+                'answer' => 'Run a few realistic scenarios in the mortgage or home loan calculator and compare the monthly benefit with the cash you would still have left.',
+            ],
+        ],
+        'related_calculators' => ['mortgage-calculator', 'home-loan-calculator', 'budget-calculator'],
+    ],
+    'understanding-vat-inclusive-pricing' => [
+        'slug' => 'understanding-vat-inclusive-pricing',
+        'title' => 'How VAT-Inclusive Pricing Actually Works',
+        'meta_title' => 'How VAT-Inclusive Pricing Actually Works | FinguruTools',
+        'meta_description' => 'Understand how VAT-inclusive pricing works, how to extract the tax portion, and why gross totals can be misleading at first glance.',
+        'headline' => 'How VAT-inclusive pricing works and why gross totals can be misleading',
+        'intro' => 'Tax-inclusive pricing often causes confusion because the displayed total already contains the tax portion, but the tax amount is not always obvious. That can make budgeting, invoice review, or margin planning harder when you are trying to separate the base price from the tax component.',
+        'sections' => [
+            [
+                'heading' => 'Inclusive pricing is not the same as adding tax on top',
+                'body' => [
+                    'When a price is tax inclusive, the listed amount is already the final gross amount. That means you cannot find the tax by simply multiplying the gross figure by the tax rate. You first have to extract the tax portion from the total.',
+                    'This is where many mistakes happen. People often apply the tax rate directly to the gross amount and overstate the tax portion. A VAT calculator helps by separating the net amount and tax correctly.',
+                ],
+            ],
+            [
+                'heading' => 'Why the distinction matters for planning',
+                'body' => [
+                    'The difference between inclusive and exclusive pricing matters in both consumer and business settings. It affects how you compare quotes, read invoices, estimate real pre-tax value, and understand what part of a transaction is being paid to the supplier versus the tax authority.',
+                    'If you work across countries or between business and personal purchases, using the wrong mode can distort comparisons quickly. One wrong assumption can change every downstream total.',
+                ],
+            ],
+            [
+                'heading' => 'Use the same tax mode consistently when comparing numbers',
+                'body' => [
+                    'A common mistake is mixing inclusive and exclusive amounts inside one comparison. For example, one quote may show a gross figure while another shows a pre-tax figure. Unless those numbers are normalized, the comparison will not be reliable.',
+                    'The safest approach is to decide whether you want to compare net values or final payable totals, then convert everything into the same frame before drawing conclusions.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Inclusive pricing already contains the tax amount.',
+            'You need to extract tax differently from how you add tax to a net amount.',
+            'Keep tax mode consistent when comparing quotes, receipts, or invoices.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Can I calculate VAT from a gross total?',
+                'answer' => 'Yes. You can use inclusive mode in the VAT calculator to extract the tax amount and the pre-tax base from a gross figure.',
+            ],
+            [
+                'question' => 'Why do inclusive and exclusive totals create confusion?',
+                'answer' => 'Because the same rate is involved, but the starting amount is different. Gross totals already contain tax, while net totals do not.',
+            ],
+        ],
+        'related_calculators' => ['vat-calculator', 'gst-calculator', 'sales-tax-calculator'],
+    ],
+    'salary-offer-net-pay' => [
+        'slug' => 'salary-offer-net-pay',
+        'title' => 'How to Compare Salary Offers Using Net Pay',
+        'meta_title' => 'How to Compare Salary Offers Using Net Pay | FinguruTools',
+        'meta_description' => 'Learn how to compare salary offers using take-home pay instead of gross salary so you can judge spending power more accurately.',
+        'headline' => 'How to compare salary offers by take-home pay instead of gross salary alone',
+        'intro' => 'A salary offer can look stronger than it really is when you focus only on the gross annual number. Taxes, deductions, contributions, and local payroll rules can materially change how much money actually reaches your account. That means two offers with different headlines may produce a much narrower gap in real monthly spending power than expected.',
+        'sections' => [
+            [
+                'heading' => 'Gross salary is a starting point, not the full answer',
+                'body' => [
+                    'Gross salary still matters for negotiations and headline comparison, but it does not tell you how the role will feel month to month. Real planning decisions such as rent, commuting, savings, and debt obligations depend on the amount you can actually spend after deductions.',
+                    'This is why net pay should be part of the comparison from the beginning rather than an afterthought once the offer is already emotionally attractive.',
+                ],
+            ],
+            [
+                'heading' => 'Location and deduction structure can change the picture',
+                'body' => [
+                    'Two jobs with similar gross pay can produce different outcomes if tax models, pension contributions, social deductions, or benefit structures vary. The same is true if one role changes your commuting cost, work-from-home setup, or regional cost of living.',
+                    'That does not mean gross salary is irrelevant. It means the offer should be evaluated as a full money-flow package instead of a single headline figure.',
+                ],
+            ],
+            [
+                'heading' => 'Use take-home pay to judge commitments and goals',
+                'body' => [
+                    'Take-home pay is the more practical benchmark for comparing how each offer supports rent, savings, loan payments, and lifestyle goals. If a role looks attractive on gross income but leaves less room after deductions, the decision becomes clearer when viewed through monthly cash flow.',
+                    'A strong offer is not only the one with the largest number. It is the one that supports your broader financial life most effectively.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Compare salary offers using both gross income and estimated net pay.',
+            'Consider tax, deductions, and cost-of-living changes together.',
+            'Judge fixed commitments and savings goals against take-home income, not headline pay.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Should I ignore gross salary when comparing jobs?',
+                'answer' => 'No. Gross salary is still useful, but take-home pay gives a more realistic picture of monthly spending power.',
+            ],
+            [
+                'question' => 'Why can two similar salaries feel very different in real life?',
+                'answer' => 'Taxes, deductions, commuting costs, benefits, and local living expenses can materially change how much usable income remains each month.',
+            ],
+        ],
+        'related_calculators' => ['take-home-salary-calculator', 'salary-calculator', 'hourly-wage-calculator'],
+    ],
 ];

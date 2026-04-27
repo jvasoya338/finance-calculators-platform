@@ -45,7 +45,7 @@
                         <span class="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white px-4 py-2 text-sm font-medium text-[#0B2A4A] shadow-[0_10px_24px_rgba(11,42,74,0.04)]">{{ $search }}</span>
                     @endforeach
                 </div>
-                <p class="mt-6 text-sm leading-7 text-[rgba(11,42,74,0.72)]">These search themes help shape stronger internal linking, richer guide topics, and country-aware finance content expansion.</p>
+                <p class="mt-6 text-sm leading-7 text-[rgba(11,42,74,0.72)]">These examples reflect the kinds of questions people often bring to this regional hub before comparing calculators, budgets, or salary decisions.</p>
             </div>
         </section>
 

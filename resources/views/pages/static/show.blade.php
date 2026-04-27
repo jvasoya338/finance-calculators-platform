@@ -65,7 +65,7 @@
                             </div>
                             <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5">
                                 <p class="text-sm font-semibold text-[#0B2A4A]">What happens next</p>
-                                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Messages are stored in the database and sent through Laravel mail so the workflow is ready for a real mail provider later.</p>
+                                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Messages are stored securely so we can review them, respond, and improve the tools people use most often.</p>
                             </div>
                             <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5">
                                 <p class="text-sm font-semibold text-[#0B2A4A]">Best for</p>

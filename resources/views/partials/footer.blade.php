@@ -27,6 +27,8 @@
                         <a href="{{ route('privacy') }}" class="transition hover:text-[#1F4E8C]">Privacy</a>
                         <a href="{{ route('terms') }}" class="transition hover:text-[#1F4E8C]">Terms</a>
                         <a href="{{ route('disclaimer') }}" class="transition hover:text-[#1F4E8C]">Disclaimer</a>
+                        <a href="{{ route('editorial-policy') }}" class="transition hover:text-[#1F4E8C]">Editorial Policy</a>
+                        <a href="{{ route('calculation-methodology') }}" class="transition hover:text-[#1F4E8C]">Methodology</a>
                     </div>
                 </div>
 

@@ -63,7 +63,9 @@ class SitePagesTest extends TestCase
 
         $this->get(route('sitemap'))
             ->assertOk()
-            ->assertHeader('content-type', 'application/xml');
+            ->assertHeader('content-type', 'application/xml')
+            ->assertSee(route('calculators.show', ['calculator' => 'emi-calculator']), false)
+            ->assertDontSee(route('calculators.show', ['calculator' => 'currency-converter']), false);
     }
 
     public function test_contact_page_renders_form(): void
@@ -102,6 +104,14 @@ class SitePagesTest extends TestCase
         $this->get(route('disclaimer'))
             ->assertOk()
             ->assertSee('Important disclaimer');
+
+        $this->get(route('editorial-policy'))
+            ->assertOk()
+            ->assertSee('How FinguruTools creates finance content and keeps pages useful.');
+
+        $this->get(route('calculation-methodology'))
+            ->assertOk()
+            ->assertSee('How FinguruTools approaches formulas, assumptions, and calculator results.');
     }
 
     public function test_guide_pages_are_available(): void
@@ -113,5 +123,20 @@ class SitePagesTest extends TestCase
         $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
             ->assertOk()
             ->assertSee('How to compare mortgage offers without focusing on rate alone');
+
+        $this->get(route('guides.show', ['guide' => 'choosing-loan-term']))
+            ->assertOk()
+            ->assertSee('How to choose the right loan term without focusing only on the monthly payment');
+    }
+
+    public function test_overlapping_calculators_are_noindexed(): void
+    {
+        $this->get(route('calculators.show', ['calculator' => 'currency-converter']))
+            ->assertOk()
+            ->assertSee('noindex,follow', false);
+
+        $this->get(route('calculators.show', ['calculator' => 'emi-calculator']))
+            ->assertOk()
+            ->assertSee('index,follow', false);
     }
 }

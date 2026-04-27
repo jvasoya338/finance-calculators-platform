@@ -14,7 +14,7 @@ class GuideController extends Controller
         return view('pages.guides.index', [
             'seo' => SeoData::base([
                 'title' => 'Finance Guides, US Finance Pages & EU Money Planning | FinguruTools',
-                'description' => 'Explore finance guides and regional landing pages from FinguruTools covering worldwide, U.S., and EU financial planning topics.',
+                'description' => 'Explore finance guides and regional hubs from FinguruTools covering loans, budgeting, investing, salary planning, and practical money decisions.',
                 'canonical' => route('guides.index'),
             ]),
             'breadcrumbs' => [

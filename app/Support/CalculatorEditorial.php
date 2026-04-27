@@ -236,10 +236,10 @@ class CalculatorEditorial
     protected static function categoryGuideMap(): array
     {
         return [
-            'loan-calculators' => ['mortgage-offers'],
+            'loan-calculators' => ['mortgage-offers', 'choosing-loan-term', 'down-payment-vs-cash-reserves'],
             'investment-calculators' => ['compounding-time-horizons', 'emergency-fund-planning'],
-            'tax-calculators' => ['take-home-pay-planning'],
-            'salary-calculators' => ['take-home-pay-planning'],
+            'tax-calculators' => ['understanding-vat-inclusive-pricing', 'take-home-pay-planning'],
+            'salary-calculators' => ['take-home-pay-planning', 'salary-offer-net-pay'],
             'credit-calculators' => ['debt-payoff-strategy'],
             'budget-calculators' => ['monthly-budget-framework', 'emergency-fund-planning'],
         ];

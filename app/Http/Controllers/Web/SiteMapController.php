@@ -19,6 +19,8 @@ class SiteMapController extends Controller
             route('privacy'),
             route('terms'),
             route('disclaimer'),
+            route('editorial-policy'),
+            route('calculation-methodology'),
         ])->merge(
             collect(array_keys(config('guides')))->map(fn (string $guide) => route('guides.show', ['guide' => $guide]))
         )->merge(
@@ -26,7 +28,7 @@ class SiteMapController extends Controller
         )->merge(
             CalculatorCatalog::categories()->map(fn (array $category) => route('categories.show', ['category' => $category['slug']]))
         )->merge(
-            CalculatorCatalog::all()->map(fn (array $calculator) => route('calculators.show', ['calculator' => $calculator['slug']]))
+            CalculatorCatalog::indexable()->map(fn (array $calculator) => route('calculators.show', ['calculator' => $calculator['slug']]))
         )->values();
 
         return response()

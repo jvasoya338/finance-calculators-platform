@@ -42,6 +42,12 @@ Route::get('/terms-and-conditions', [StaticPageController::class, 'show'])
 Route::get('/disclaimer', [StaticPageController::class, 'show'])
     ->defaults('page', 'disclaimer')
     ->name('disclaimer');
+Route::get('/editorial-policy', [StaticPageController::class, 'show'])
+    ->defaults('page', 'editorial-policy')
+    ->name('editorial-policy');
+Route::get('/calculation-methodology', [StaticPageController::class, 'show'])
+    ->defaults('page', 'calculation-methodology')
+    ->name('calculation-methodology');
 
 Route::get('/sitemap.xml', SiteMapController::class)->name('sitemap');
 

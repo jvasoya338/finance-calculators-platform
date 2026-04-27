@@ -49,22 +49,29 @@ class CalculatorCatalog
 
     public static function forCategory(string $slug): Collection
     {
-        return self::all()
+        return self::indexable()
             ->filter(fn (array $calculator) => $calculator['category'] === $slug)
             ->values();
     }
 
     public static function featured(int $limit = 6): Collection
     {
-        return self::all()
+        return self::indexable()
             ->filter(fn (array $calculator) => Arr::get($calculator, 'featured'))
             ->take($limit)
             ->values();
     }
 
-    public static function popular(int $limit = 8): Collection
+    public static function indexable(): Collection
     {
         return self::all()
+            ->filter(fn (array $calculator) => $calculator['indexable'] ?? true)
+            ->values();
+    }
+
+    public static function popular(int $limit = 8): Collection
+    {
+        return self::indexable()
             ->filter(fn (array $calculator) => Arr::get($calculator, 'popular'))
             ->take($limit)
             ->values();
@@ -72,7 +79,7 @@ class CalculatorCatalog
 
     public static function recent(int $limit = 6): Collection
     {
-        return self::all()
+        return self::indexable()
             ->sortByDesc(fn (array $calculator) => array_search($calculator['slug'], array_keys(config('calculators')), true))
             ->take($limit)
             ->values();
@@ -82,7 +89,7 @@ class CalculatorCatalog
     {
         return collect($calculator['related'] ?? [])
             ->map(fn (string $slug) => self::find($slug))
-            ->filter()
+            ->filter(fn (?array $item) => $item && ($item['indexable'] ?? true))
             ->values();
     }
 
@@ -94,6 +101,7 @@ class CalculatorCatalog
         $calculator['route_name'] = 'calculators.show';
         $calculator['category_name'] = $category['name'] ?? 'Calculators';
         $calculator['category_url'] = route('categories.show', ['category' => $calculator['category']], false);
+        $calculator['indexable'] = $calculator['indexable'] ?? true;
 
         return $calculator;
     }

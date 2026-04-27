@@ -8,7 +8,7 @@
                 <p class="eyebrow">All calculators</p>
                 <h1 class="section-title mt-4">Explore the full finance tools library</h1>
                 <p class="section-copy mt-4">
-                    Browse loan, investment, tax, salary, credit, and budgeting calculators built with a reusable page and SEO architecture.
+                    Browse loan, investment, tax, salary, credit, and budgeting calculators with clear inputs, worked examples, and practical planning help.
                 </p>
             </div>
             <div class="surface-panel p-5 sm:p-6">

@@ -24,22 +24,22 @@
 
         <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             <a href="{{ route('regional.show', ['region' => 'india-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,174,75,0.45)]">
-                <p class="eyebrow">Regional SEO page</p>
+                <p class="eyebrow">Regional hub</p>
                 <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">India finance tools</h2>
                 <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A focused landing page for EMI, SIP, GST, salary, and practical money-planning searches in India.</p>
             </a>
             <a href="{{ route('regional.show', ['region' => 'uk-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
-                <p class="eyebrow">Regional SEO page</p>
+                <p class="eyebrow">Regional hub</p>
                 <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">UK finance tools</h2>
                 <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A dedicated landing page for UK mortgage, salary, tax, savings, and debt planning searches.</p>
             </a>
             <a href="{{ route('regional.show', ['region' => 'us-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
-                <p class="eyebrow">Regional SEO page</p>
+                <p class="eyebrow">Regional hub</p>
                 <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">US finance tools</h2>
                 <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A dedicated landing page for U.S.-focused mortgage, tax, salary, and debt planning searches.</p>
             </a>
             <a href="{{ route('regional.show', ['region' => 'eu-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,174,75,0.45)]">
-                <p class="eyebrow">Regional SEO page</p>
+                <p class="eyebrow">Regional hub</p>
                 <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">EU finance tools</h2>
                 <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">A dedicated landing page for VAT, salary, savings, mortgage, and budgeting searches across Europe.</p>
             </a>

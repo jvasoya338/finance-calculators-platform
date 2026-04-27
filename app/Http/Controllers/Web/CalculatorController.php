@@ -44,6 +44,18 @@ class CalculatorController extends Controller
         $payload = $request->validatedPayload();
         $hasResult = $request->query() !== [];
         $result = $hasResult ? $calculatorService->calculate($calculator, $payload) : null;
+        $examplePayload = collect($page['fields'])
+            ->mapWithKeys(function (array $field, string $name) use ($countryContext) {
+                $default = $field['default'] ?? null;
+
+                if ($name === 'country') {
+                    $default = $countryContext->current()['tax_model'] ?? $default;
+                }
+
+                return [$name => $default];
+            })
+            ->all();
+        $exampleResult = $calculatorService->calculate($calculator, $examplePayload);
 
         $breadcrumbs = [
             ['label' => 'Home', 'url' => route('home')],
@@ -56,6 +68,7 @@ class CalculatorController extends Controller
             'seo' => SeoData::forCalculator($page, $breadcrumbs),
             'calculator' => $page,
             'editorial' => CalculatorEditorial::forCalculator($page),
+            'exampleResult' => $exampleResult,
             'formValues' => array_merge([
                 'country' => $countryContext->current()['tax_model'] ?? null,
             ], $payload),

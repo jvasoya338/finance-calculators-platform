@@ -20,6 +20,8 @@ class StaticPageController extends Controller
             'privacy-policy' => 'privacy',
             'terms-and-conditions' => 'terms',
             'disclaimer' => 'disclaimer',
+            'editorial-policy' => 'editorial-policy',
+            'calculation-methodology' => 'calculation-methodology',
         };
 
         $breadcrumbs = [

@@ -34,6 +34,7 @@ class SeoData
             'title' => $calculator['meta_title'],
             'description' => $calculator['meta_description'],
             'canonical' => route('calculators.show', ['calculator' => $calculator['slug']]),
+            'robots' => ($calculator['indexable'] ?? true) ? 'index,follow' : 'noindex,follow',
             'json_ld' => array_filter($jsonLd),
         ]);
     }
@@ -68,7 +69,7 @@ class SeoData
     {
         return self::base([
             'title' => 'Finance Calculators for Loans, Investments, Taxes & Budgets',
-            'description' => 'Explore premium worldwide finance calculators for loans, investments, taxes, salaries, debt, and budgeting on FinguruTools with country-aware defaults and scalable SEO structure.',
+            'description' => 'Explore finance calculators for loans, investments, taxes, salaries, debt, and budgeting on FinguruTools with clear explanations and country-aware defaults.',
             'canonical' => route('home'),
             'json_ld' => [
                 self::organizationSchema(),

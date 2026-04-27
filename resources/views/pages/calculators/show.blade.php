@@ -19,7 +19,7 @@
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
                         <p class="text-sm text-[rgba(11,42,74,0.56)]">Metadata</p>
-                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">SEO optimized</p>
+                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">Explained clearly</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
                         <p class="text-sm text-[rgba(11,42,74,0.56)]">Audience</p>
@@ -100,6 +100,23 @@
                             <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4">{{ $tip }}</li>
                         @endforeach
                     </ul>
+                </section>
+
+                <section class="surface-panel p-6 sm:p-8">
+                    <p class="eyebrow">Worked example</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">A sample scenario before you enter your own numbers</h2>
+                    <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                        Many people understand a calculator faster when they can see one complete example first. The summary below uses the default assumptions shown in the form, so you can get a feel for the output before testing your own situation.
+                    </p>
+                    <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                        @foreach($exampleResult['summary'] as $stat)
+                            <div class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
+                                <p class="text-sm text-[rgba(11,42,74,0.56)]">{{ $stat['label'] }}</p>
+                                <p class="mt-2 text-2xl font-semibold text-[#0B2A4A]">{{ $stat['value'] }}</p>
+                            </div>
+                        @endforeach
+                    </div>
+                    <p class="mt-6 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $exampleResult['explanation'] }}</p>
                 </section>
 
                 <section class="surface-panel p-6 sm:p-8">
