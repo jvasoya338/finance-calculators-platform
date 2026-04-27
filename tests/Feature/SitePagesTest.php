@@ -61,6 +61,10 @@ class SitePagesTest extends TestCase
             ->assertOk()
             ->assertSee('Investment calculators');
 
+        $this->get(route('categories.show', ['category' => 'crypto-calculators']))
+            ->assertOk()
+            ->assertSee('Crypto calculators');
+
         $this->get(route('sitemap'))
             ->assertOk()
             ->assertHeader('content-type', 'application/xml')
@@ -127,6 +131,10 @@ class SitePagesTest extends TestCase
         $this->get(route('guides.show', ['guide' => 'choosing-loan-term']))
             ->assertOk()
             ->assertSee('How to choose the right loan term without focusing only on the monthly payment');
+
+        $this->get(route('guides.show', ['guide' => 'bitcoin-dca-discipline']))
+            ->assertOk()
+            ->assertSee('How Bitcoin DCA helps reduce timing pressure in a volatile market');
     }
 
     public function test_overlapping_calculators_are_noindexed(): void

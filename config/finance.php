@@ -40,6 +40,12 @@ return [
             'headline' => 'Debt, credit card, and eligibility calculators for smarter repayment.',
             'description' => 'Understand payoff timelines, interest costs, and borrowing capacity using transparent assumptions and clear outputs.',
         ],
+        'crypto-calculators' => [
+            'slug' => 'crypto-calculators',
+            'name' => 'Crypto calculators',
+            'headline' => 'Bitcoin and crypto planning tools for disciplined investing and profit tracking.',
+            'description' => 'Compare recurring crypto buying plans, estimate profit and loss, and keep digital-asset decisions grounded in clear assumptions.',
+        ],
         'budget-calculators' => [
             'slug' => 'budget-calculators',
             'name' => 'Budget calculators',

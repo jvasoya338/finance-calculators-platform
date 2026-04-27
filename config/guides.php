@@ -471,4 +471,98 @@ return [
         ],
         'related_calculators' => ['take-home-salary-calculator', 'salary-calculator', 'hourly-wage-calculator'],
     ],
+    'bitcoin-dca-discipline' => [
+        'slug' => 'bitcoin-dca-discipline',
+        'title' => 'How Bitcoin DCA Helps Reduce Timing Pressure',
+        'meta_title' => 'How Bitcoin DCA Helps Reduce Timing Pressure | FinguruTools',
+        'meta_description' => 'Learn how Bitcoin dollar-cost averaging can reduce timing pressure, improve discipline, and support steadier crypto investing decisions.',
+        'headline' => 'How Bitcoin DCA helps reduce timing pressure in a volatile market',
+        'intro' => 'Bitcoin attracts attention because price moves can be dramatic, but that same volatility also makes it hard to know when to buy. Dollar-cost averaging, or DCA, is one way to reduce that pressure. Instead of waiting for the perfect entry, you commit to buying a fixed amount on a regular schedule.',
+        'sections' => [
+            [
+                'heading' => 'DCA turns one big decision into a repeatable habit',
+                'body' => [
+                    'Many people struggle more with consistency than with interest in the asset itself. DCA helps because it replaces one emotionally heavy decision with a routine purchase process. That can make crypto exposure easier to manage inside a broader budget.',
+                    'The main benefit is not magic pricing. It is behavioral simplicity. You avoid building the whole plan around trying to predict the next swing.',
+                ],
+            ],
+            [
+                'heading' => 'Volatility still matters, but the stress feels different',
+                'body' => [
+                    'DCA does not remove risk. Bitcoin can still fall sharply, remain volatile for long periods, or underperform your expectations. What DCA changes is the way you interact with that volatility. Instead of trying to find one ideal entry point, you spread exposure over time.',
+                    'That can make the experience more tolerable for people who believe in long-term exposure but do not want to place the outcome on one short-term price decision.',
+                ],
+            ],
+            [
+                'heading' => 'A DCA plan still needs position limits and budget discipline',
+                'body' => [
+                    'A recurring crypto plan works best when it fits inside a broader financial system. Emergency savings, debt obligations, and core bills should still be protected first. DCA should feel like a planned allocation, not like an impulsive habit that ignores other priorities.',
+                    'That is why a crypto calculator is helpful. It lets you test contribution size and time horizon without pretending the asset is risk free.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Bitcoin DCA reduces the pressure of trying to time a single perfect entry.',
+            'It changes the decision process, not the underlying market risk.',
+            'A strong DCA plan still needs position sizing and budget discipline.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Does DCA guarantee a better result than lump-sum buying?',
+                'answer' => 'No. It is a discipline tool, not a guarantee. It mainly helps by spreading entry timing and reducing emotional pressure.',
+            ],
+            [
+                'question' => 'Should DCA replace an emergency fund or debt payments?',
+                'answer' => 'Usually no. Crypto exposure is generally stronger when basic financial stability is already in place.',
+            ],
+        ],
+        'related_calculators' => ['bitcoin-dca-calculator', 'budget-calculator', 'investment-calculator'],
+    ],
+    'crypto-position-sizing' => [
+        'slug' => 'crypto-position-sizing',
+        'title' => 'How to Size a Crypto Position More Carefully',
+        'meta_title' => 'How to Size a Crypto Position More Carefully | FinguruTools',
+        'meta_description' => 'Learn how to size a crypto position more carefully by balancing conviction, volatility, fees, and the rest of your financial plan.',
+        'headline' => 'How to size a crypto position without letting volatility take over your plan',
+        'intro' => 'Crypto position sizing is not only about how much you want to make if the asset rises. It is also about how much volatility, downside, and emotional strain you can realistically absorb if the market moves against you. A position that feels exciting at entry can feel very different during a large drawdown.',
+        'sections' => [
+            [
+                'heading' => 'Start with the role crypto plays in your wider finances',
+                'body' => [
+                    'A crypto position should be sized in the context of everything else: cash reserves, debt levels, fixed bills, long-term savings, and your tolerance for uncertainty. If a position is large enough to disrupt the rest of your financial life, it is probably too large for the role it is supposed to play.',
+                    'This is one reason profit calculators are useful. They help show what a position really means in money terms, not only in price charts or percentages.',
+                ],
+            ],
+            [
+                'heading' => 'Fees and entry price still shape the outcome',
+                'body' => [
+                    'Smaller and more frequent transactions can feel safer, but fees still matter. So does the difference between the entry price you imagined and the one you actually received. Good position sizing includes those frictions instead of ignoring them.',
+                    'That is especially true when working with smaller accounts. A modest fee structure can noticeably change the real result if position size is not considered carefully.',
+                ],
+            ],
+            [
+                'heading' => 'Plan for downside, not only for upside',
+                'body' => [
+                    'A healthier crypto plan asks what happens if the asset falls hard, not only what happens if it rises. If the downside would trigger panic selling, force debt, or interfere with savings goals, the position may be too aggressive.',
+                    'Sizing decisions feel more stable when they are small enough to survive volatility and large enough to remain meaningful. The right size is usually the one you can hold through uncertainty without destabilizing everything else.',
+                ],
+            ],
+        ],
+        'takeaways' => [
+            'Size crypto positions in the context of your full financial life.',
+            'Include fees and execution reality in the position math.',
+            'A position should be survivable in a downturn, not only attractive in an upswing.',
+        ],
+        'faqs' => [
+            [
+                'question' => 'Is a larger position always better if I have strong conviction?',
+                'answer' => 'Not necessarily. Strong conviction does not remove volatility or personal cash-flow risk, so size still needs to be realistic.',
+            ],
+            [
+                'question' => 'Why think about downside first?',
+                'answer' => 'Because crypto volatility can be large. A position should be sized so a major drawdown does not break the rest of your financial plan.',
+            ],
+        ],
+        'related_calculators' => ['crypto-profit-calculator', 'bitcoin-dca-calculator', 'budget-calculator'],
+    ],
 ];

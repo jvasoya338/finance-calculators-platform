@@ -35,6 +35,8 @@ class CalculatorService
             'sales_tax' => $this->calculateSalesTax($calculator, $input),
             'credit_card_interest', 'debt_payoff' => $this->calculateDebtPayoff($calculator, $input),
             'loan_eligibility' => $this->calculateLoanEligibility($calculator, $input),
+            'crypto_dca' => $this->calculateCryptoDca($calculator, $input),
+            'crypto_profit' => $this->calculateCryptoProfit($calculator, $input),
             'budget' => $this->calculateBudget($calculator, $input),
             'expense' => $this->calculateExpense($calculator, $input),
             'currency_converter' => $this->calculateCurrencyConverter($calculator, $input),
@@ -272,6 +274,65 @@ class CalculatorService
             'chart' => $this->breakdownChart([
                 'Net income' => $netIncome,
                 'Tax' => $taxData['tax'],
+            ]),
+        ];
+    }
+
+    protected function calculateCryptoDca(array $calculator, array $input): array
+    {
+        $months = (int) round($input['years'] * 12);
+        $invested = $input['monthly_investment'] * $months;
+        $bitcoinAccumulated = $input['bitcoin_price'] > 0
+            ? $invested / $input['bitcoin_price']
+            : 0.0;
+        $projectedPrice = $input['bitcoin_price'] * ((1 + ($input['annual_growth'] / 100)) ** $input['years']);
+        $projectedValue = $bitcoinAccumulated * $projectedPrice;
+        $estimatedGain = $projectedValue - $invested;
+
+        return [
+            'headline' => 'At this pace, your recurring Bitcoin purchases could build a position worth about '.$this->money($projectedValue).'.',
+            'summary' => [
+                ['label' => 'Projected value', 'value' => $this->money($projectedValue)],
+                ['label' => 'Total invested', 'value' => $this->money($invested)],
+                ['label' => 'Estimated gain / loss', 'value' => $this->money($estimatedGain)],
+            ],
+            'details' => [
+                ['label' => 'Estimated BTC accumulated', 'value' => number_format($bitcoinAccumulated, 8)],
+                ['label' => 'Projected BTC price', 'value' => $this->money($projectedPrice)],
+                ['label' => 'Investment period', 'value' => $input['years'].' years'],
+            ],
+            'explanation' => 'This example assumes you keep buying at a steady pace and that the asset follows the annual growth assumption you entered. Real crypto prices are volatile and can differ sharply from any smooth projection.',
+            'chart' => $this->breakdownChart([
+                'Total invested' => $invested,
+                'Estimated gain / loss' => max(0, $estimatedGain),
+            ]),
+        ];
+    }
+
+    protected function calculateCryptoProfit(array $calculator, array $input): array
+    {
+        $cost = ($input['buy_price'] * $input['quantity']) + $input['buy_fee'];
+        $proceeds = ($input['sell_price'] * $input['quantity']) - $input['sell_fee'];
+        $profit = $proceeds - $cost;
+        $roi = $cost > 0 ? ($profit / $cost) * 100 : 0.0;
+
+        return [
+            'headline' => 'Your position would show a '.($profit >= 0 ? 'net profit of ' : 'net loss of ').$this->money(abs($profit)).'.',
+            'summary' => [
+                ['label' => 'Net profit / loss', 'value' => $this->money($profit)],
+                ['label' => 'Total cost', 'value' => $this->money($cost)],
+                ['label' => 'Net proceeds', 'value' => $this->money($proceeds)],
+                ['label' => 'Return percentage', 'value' => $this->percent($roi)],
+            ],
+            'details' => [
+                ['label' => 'Quantity', 'value' => number_format($input['quantity'], 8)],
+                ['label' => 'Buy price', 'value' => $this->money($input['buy_price'])],
+                ['label' => 'Sell price', 'value' => $this->money($input['sell_price'])],
+            ],
+            'explanation' => 'This result includes both buy and sell fees so the return reflects the actual position math rather than price movement alone.',
+            'chart' => $this->breakdownChart([
+                'Total cost' => $cost,
+                'Net proceeds' => $proceeds,
             ]),
         ];
     }

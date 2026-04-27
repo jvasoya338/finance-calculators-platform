@@ -220,6 +220,11 @@ class CalculatorEditorial
                 'Compare multiple payment scenarios to see where modest changes can meaningfully improve the timeline.',
                 'Use the category together with the budgeting tools so debt plans remain realistic month after month.',
             ],
+            'crypto-calculators' => [
+                'Use recurring-buy and profit-tracking tools to keep crypto decisions grounded in position size, fees, and realistic assumptions.',
+                'Compare how monthly buying plans build exposure over time instead of relying on a single entry point.',
+                'Review crypto outcomes alongside budgeting and investing tools so volatility does not overwhelm the rest of your financial plan.',
+            ],
             'budget-calculators' => [
                 'Build a clearer monthly money picture by comparing income, expenses, and the room left for savings goals.',
                 'Use category-level calculations to identify which areas create the most pressure on cash flow.',
@@ -241,6 +246,7 @@ class CalculatorEditorial
             'tax-calculators' => ['understanding-vat-inclusive-pricing', 'take-home-pay-planning'],
             'salary-calculators' => ['take-home-pay-planning', 'salary-offer-net-pay'],
             'credit-calculators' => ['debt-payoff-strategy'],
+            'crypto-calculators' => ['bitcoin-dca-discipline', 'crypto-position-sizing'],
             'budget-calculators' => ['monthly-budget-framework', 'emergency-fund-planning'],
         ];
     }

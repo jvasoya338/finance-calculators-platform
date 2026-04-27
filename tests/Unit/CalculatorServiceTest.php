@@ -35,4 +35,19 @@ class CalculatorServiceTest extends TestCase
         $this->assertSame('Maturity value', $result['summary'][0]['label']);
         $this->assertStringContainsString($country['symbol'], $result['summary'][0]['value']);
     }
+
+    public function test_crypto_profit_calculation_returns_profit_summary(): void
+    {
+        $result = app(CalculatorService::class)->calculate('crypto-profit-calculator', [
+            'buy_price' => 40000,
+            'sell_price' => 50000,
+            'quantity' => 0.5,
+            'buy_fee' => 25,
+            'sell_fee' => 30,
+        ]);
+
+        $this->assertSame('Net profit / loss', $result['summary'][0]['label']);
+        $this->assertNotEmpty($result['summary'][0]['value']);
+        $this->assertNotEmpty($result['chart']['segments']);
+    }
 }
