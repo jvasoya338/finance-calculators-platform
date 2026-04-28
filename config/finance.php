@@ -5,7 +5,7 @@ return [
         'name' => 'FinguruTools',
         'tagline' => 'Premium worldwide finance tools and calculators by TJVerse Group.',
         'description' => 'FinguruTools provides finance calculators, money planning guides, and practical decision support for loans, investing, tax, salary, debt, and budgeting.',
-        'support_email' => env('SUPPORT_EMAIL', 'tjvers.group@gmail.com'),
+        'support_email' => env('SUPPORT_EMAIL', 'fingurutools@gmail.com'),
         'website' => env('APP_URL', 'https://fingurutools.com'),
         'company' => 'TJVerse Group',
     ],
