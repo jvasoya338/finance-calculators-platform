@@ -13,6 +13,7 @@ class SitePagesTest extends TestCase
         $response->assertOk();
         $response->assertSee('Premium finance tools for smarter everyday decisions.');
         $response->assertSee('Browse all calculators');
+        $response->assertSee('People use FinguruTools for very different reasons.');
     }
 
     public function test_calculator_page_renders_results_for_valid_input(): void
@@ -126,7 +127,9 @@ class SitePagesTest extends TestCase
 
         $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
             ->assertOk()
-            ->assertSee('How to compare mortgage offers without focusing on rate alone');
+            ->assertSee('How to compare mortgage offers without focusing on rate alone')
+            ->assertSee('How we approach this topic')
+            ->assertSee('Before you act on the result');
 
         $this->get(route('guides.show', ['guide' => 'choosing-loan-term']))
             ->assertOk()
@@ -146,5 +149,13 @@ class SitePagesTest extends TestCase
         $this->get(route('calculators.show', ['calculator' => 'emi-calculator']))
             ->assertOk()
             ->assertSee('index,follow', false);
+    }
+
+    public function test_about_page_has_stronger_team_and_trust_content(): void
+    {
+        $this->get(route('about'))
+            ->assertOk()
+            ->assertSee('Our process is intentionally practical.')
+            ->assertSee('We also pay attention to trust signals that matter for finance content.');
     }
 }

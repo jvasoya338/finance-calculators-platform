@@ -92,6 +92,8 @@
                 <p>FinguruTools brings together calculators, practical guides, regional finance hubs, and plain-language explanations so people can compare common money choices without jumping between multiple sites. Whether the question is about a loan payment, a savings plan, take-home pay, tax, debt payoff, or a crypto position, the goal is the same: make the numbers easier to understand before a real decision is made.</p>
                 <p>Many finance sites stop at the calculation itself. We try to go one step further by showing formulas, worked examples, FAQs, related tools, and supporting articles that explain what the result means. That helps visitors understand tradeoffs such as affordability versus total cost, growth versus contribution size, or spending comfort versus long-term goals.</p>
                 <p>The site is designed for everyday use on mobile or desktop, and it is especially useful for people who want a cleaner starting point before checking official lender, payroll, tax, or provider sources. FinguruTools is not meant to replace professional advice. It is meant to make the next financial question easier to frame and compare.</p>
+                <p>People use FinguruTools for very different reasons. One visitor may be checking whether a home loan payment fits inside a monthly budget. Another may be comparing retirement projections, estimating take-home salary before accepting an offer, or stress-testing a debt payoff plan before committing to a higher payment. In each case, the job of the site is the same: reduce confusion and help the person move from a vague money concern to a clearer decision path.</p>
+                <p>That is also why the platform includes regional finance hubs, educational guide pages, and connected links between related calculators. A strong finance site should not feel like a collection of isolated forms. It should help users understand what question to ask next, what assumption matters most, and where the result may need extra caution because real-world rules vary by lender, employer, product, or country.</p>
             </div>
         </div>
     </section>
@@ -191,6 +193,9 @@
                 <h2 class="section-title mt-4">A finance resource built for both calculations and better decisions</h2>
                 <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">
                     Good finance tools should do more than output a number. FinguruTools pairs calculations with plain-language explanations, related guides, regional hubs, and connected planning flows so people can understand what the result means before acting on it.
+                </p>
+                <p class="mt-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                    We also try to keep the experience trustworthy. That means publishing methodology notes, editorial guidance, legal pages, worked examples, and support information so users can understand both the strengths and the limits of the tool they are using.
                 </p>
                 <div class="mt-8 rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-6 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
                     <h3 class="text-lg font-semibold text-[#0B2A4A]">Frequently asked questions</h3>

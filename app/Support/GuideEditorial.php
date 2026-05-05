@@ -201,7 +201,19 @@ class GuideEditorial
             'author' => [
                 'label' => 'Reviewed for FinguruTools',
                 'name' => 'Finance content team',
-                'note' => 'This article is written to support calculator users with practical, plain-language planning guidance.',
+                'note' => 'This article is reviewed by the FinguruTools finance content team, a small group of researchers, writers, and product builders focused on practical personal-finance education.',
+                'bio' => [
+                    'Our role is to turn common finance questions into plain-language planning guidance that works alongside calculators, examples, and scenario comparisons.',
+                    'We write for general educational use and update pages when users need clearer assumptions, better examples, or stronger context before making a real-world decision.',
+                ],
+            ],
+            'review_process' => [
+                'heading' => 'How we approach this topic',
+                'paragraphs' => [
+                    'Each FinguruTools guide is designed to support a real calculator or finance planning workflow. That means the article is not meant to be filler around a tool. It should help a reader understand the decision, the tradeoffs, and the next question to ask before acting on a result.',
+                    'We aim to keep the language practical, avoid hype, and make assumptions visible. When a topic can vary by country, lender, employer, market, or tax system, we present the page as planning guidance rather than pretending it is a one-size-fits-all official answer.',
+                    'The most useful way to read a guide on FinguruTools is to pair it with a calculator, test more than one scenario, and then verify important decisions with official sources or qualified professionals where needed.',
+                ],
             ],
             'audience' => [
                 'heading' => $audienceHeading,
@@ -215,6 +227,15 @@ class GuideEditorial
             'mistakes' => [
                 'heading' => 'Common mistakes to avoid',
                 'items' => $mistakes,
+            ],
+            'checklist' => [
+                'heading' => 'Before you act on the result',
+                'items' => [
+                    'Check whether the inputs reflect your real current numbers rather than ideal or outdated assumptions.',
+                    'Compare at least one more scenario so you can see the tradeoff between the convenient option and the more conservative option.',
+                    'Review how the decision affects monthly cash flow, reserves, and flexibility instead of focusing on a single attractive output.',
+                    'Use the result as a planning step, then confirm important decisions with lender terms, employer documents, provider rules, tax guidance, or professional advice where relevant.',
+                ],
             ],
             'closing' => [
                 'heading' => 'What to do next',
