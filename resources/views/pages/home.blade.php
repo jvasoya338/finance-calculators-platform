@@ -85,6 +85,18 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="surface-panel p-6 sm:p-8">
+            <p class="eyebrow">What FinguruTools does</p>
+            <h2 class="section-title mt-4">A finance site built for people who want clearer decisions, not just quick numbers</h2>
+            <div class="mt-6 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                <p>FinguruTools brings together calculators, practical guides, regional finance hubs, and plain-language explanations so people can compare common money choices without jumping between multiple sites. Whether the question is about a loan payment, a savings plan, take-home pay, tax, debt payoff, or a crypto position, the goal is the same: make the numbers easier to understand before a real decision is made.</p>
+                <p>Many finance sites stop at the calculation itself. We try to go one step further by showing formulas, worked examples, FAQs, related tools, and supporting articles that explain what the result means. That helps visitors understand tradeoffs such as affordability versus total cost, growth versus contribution size, or spending comfort versus long-term goals.</p>
+                <p>The site is designed for everyday use on mobile or desktop, and it is especially useful for people who want a cleaner starting point before checking official lender, payroll, tax, or provider sources. FinguruTools is not meant to replace professional advice. It is meant to make the next financial question easier to frame and compare.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div class="flex items-end justify-between gap-6">
             <div>
                 <p class="eyebrow">Categories</p>

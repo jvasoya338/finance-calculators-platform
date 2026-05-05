@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
 use App\Support\CalculatorCatalog;
+use App\Support\GuideEditorial;
 use App\Support\SeoData;
 use Illuminate\View\View;
 
@@ -41,6 +42,8 @@ class GuideController extends Controller
             ->map(fn (string $slug) => CalculatorCatalog::find($slug))
             ->filter()
             ->values();
+        $editorial = GuideEditorial::forGuide($page);
+        $faqs = array_merge($page['faqs'] ?? [], $editorial['extra_faqs'] ?? []);
 
         return view('pages.guides.show', [
             'seo' => SeoData::base([
@@ -50,10 +53,12 @@ class GuideController extends Controller
                 'json_ld' => [
                     SeoData::websiteSchema(),
                     SeoData::breadcrumbSchema($breadcrumbs),
-                    SeoData::faqSchema($page['faqs'] ?? []),
+                    SeoData::faqSchema($faqs),
                 ],
             ]),
             'page' => $page,
+            'editorial' => $editorial,
+            'faqs' => $faqs,
             'breadcrumbs' => $breadcrumbs,
             'relatedCalculators' => $relatedCalculators,
         ]);
