@@ -138,6 +138,11 @@ class SitePagesTest extends TestCase
         $this->get(route('guides.show', ['guide' => 'bitcoin-dca-discipline']))
             ->assertOk()
             ->assertSee('How Bitcoin DCA helps reduce timing pressure in a volatile market');
+
+        $this->get(route('guides.show', ['guide' => 'monthly-budget-framework']))
+            ->assertOk()
+            ->assertSee('Choose a framework that is simple enough to repeat')
+            ->assertSee('Why this budgeting framework works in real life');
     }
 
     public function test_overlapping_calculators_are_noindexed(): void
@@ -156,6 +161,8 @@ class SitePagesTest extends TestCase
         $this->get(route('about'))
             ->assertOk()
             ->assertSee('Our process is intentionally practical.')
-            ->assertSee('We also pay attention to trust signals that matter for finance content.');
+            ->assertSee('We also pay attention to trust signals that matter for finance content.')
+            ->assertSee('That team includes people who think about calculators from multiple angles:')
+            ->assertSee('Our aim over time is simple: make FinguruTools more useful with every revision.');
     }
 }
