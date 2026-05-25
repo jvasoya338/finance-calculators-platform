@@ -85,6 +85,19 @@ class CalculatorCatalog
             ->values();
     }
 
+    public static function recentExcluding(Collection|array $excludedCalculators, int $limit = 6): Collection
+    {
+        $excludedSlugs = collect($excludedCalculators)
+            ->map(fn (array $calculator) => $calculator['slug'])
+            ->all();
+
+        return self::indexable()
+            ->reject(fn (array $calculator) => in_array($calculator['slug'], $excludedSlugs, true))
+            ->sortByDesc(fn (array $calculator) => array_search($calculator['slug'], array_keys(config('calculators')), true))
+            ->take($limit)
+            ->values();
+    }
+
     public static function related(array $calculator): Collection
     {
         return collect($calculator['related'] ?? [])

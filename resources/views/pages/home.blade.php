@@ -69,7 +69,7 @@
                     <p class="eyebrow">Find a calculator fast</p>
                     <h2 class="section-title mt-4">Search the calculator library</h2>
                     <p class="section-copy mt-4">
-                        Start with popular tools or jump straight into the category that matches your next money decision.
+                        Type a topic and open matching results in the full calculator library, or start with one of the popular tools below.
                     </p>
                 </div>
                 <div class="space-y-5">
@@ -77,7 +77,7 @@
                         <label for="home-calculator-search" class="sr-only">Search calculators</label>
                         <input id="home-calculator-search" name="q" type="search" class="form-input" placeholder="Search EMI, SIP, salary, GST, budget...">
                         <button type="submit" class="btn-primary inline-flex items-center justify-center rounded-2xl px-5 py-3.5 text-sm font-semibold transition">
-                            Search
+                            Search all calculators
                         </button>
                     </form>
                     <div class="grid gap-4 sm:grid-cols-2">
@@ -142,16 +142,16 @@
                 <h3 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">A trustworthy calculator experience.</h3>
                 <div class="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
-                        <p class="text-2xl font-semibold text-[#0B2A4A]">{{ $calculatorCount }}+</p>
-                        <p class="mt-1 text-sm text-[rgba(11,42,74,0.72)]">working finance calculators</p>
+                        <p class="text-sm font-semibold text-[#0B2A4A]">Reviewed formulas</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Each calculator shows assumptions, formulas, and result context.</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
-                        <p class="text-2xl font-semibold text-[#0B2A4A]">{{ $guideCount }}+</p>
-                        <p class="mt-1 text-sm text-[rgba(11,42,74,0.72)]">practical finance guides</p>
+                        <p class="text-sm font-semibold text-[#0B2A4A]">Updated guide pages</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Guide articles include author, publish date, and last-updated signals.</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5">
-                        <p class="text-2xl font-semibold text-[#0B2A4A]">4</p>
-                        <p class="mt-1 text-sm text-[rgba(11,42,74,0.72)]">regional planning hubs</p>
+                        <p class="text-sm font-semibold text-[#0B2A4A]">Contact form support</p>
+                        <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Feedback and partnership messages go through a structured form.</p>
                     </div>
                 </div>
                 <ul class="mt-6 space-y-4 text-sm leading-7 text-[rgba(11,42,74,0.72)]">
@@ -162,7 +162,8 @@
                 </ul>
                 <div class="mt-8 rounded-3xl border border-[rgba(31,78,140,0.12)] bg-[rgba(31,78,140,0.03)] p-5">
                     <p class="text-sm font-semibold text-[#0B2A4A]">Planning updates</p>
-                    <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">For calculator feedback, partnership enquiries, or finance guide suggestions, contact the FinguruTools team directly at <a href="mailto:{{ config('finance.brand.support_email') }}" class="font-semibold text-[#1F4E8C] hover:text-[#1FAE4B]">{{ config('finance.brand.support_email') }}</a>.</p>
+                    <p class="mt-2 text-sm leading-7 text-[rgba(11,42,74,0.72)]">For calculator feedback, partnership enquiries, or finance guide suggestions, use the contact form so the request reaches the right workflow.</p>
+                    <a href="{{ route('contact') }}" class="mt-4 inline-flex text-sm font-semibold text-[#1F4E8C] hover:text-[#1FAE4B]">Open contact form →</a>
                 </div>
             </aside>
         </div>
@@ -171,7 +172,7 @@
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div class="flex items-end justify-between gap-6">
             <div>
-                <p class="eyebrow">Guides</p>
+                <p class="eyebrow">Latest guide updates</p>
                 <h2 class="section-title mt-4">Practical reading before bigger money decisions</h2>
             </div>
             <a href="{{ route('guides.index') }}" class="hidden text-sm font-semibold text-[#1F4E8C] hover:text-[#1FAE4B] sm:inline-flex">View all guides</a>

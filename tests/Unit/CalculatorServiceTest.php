@@ -3,6 +3,7 @@
 namespace Tests\Unit;
 
 use App\Services\Calculators\CalculatorService;
+use App\Support\CalculatorCatalog;
 use App\Support\CountryContext;
 use Tests\TestCase;
 
@@ -49,5 +50,16 @@ class CalculatorServiceTest extends TestCase
         $this->assertSame('Net profit / loss', $result['summary'][0]['label']);
         $this->assertNotEmpty($result['summary'][0]['value']);
         $this->assertNotEmpty($result['chart']['segments']);
+    }
+
+    public function test_recent_calculators_can_exclude_featured_tools(): void
+    {
+        $featured = CalculatorCatalog::featured();
+        $recent = CalculatorCatalog::recentExcluding($featured);
+
+        $this->assertNotEmpty($recent);
+        $this->assertEmpty(
+            $recent->pluck('slug')->intersect($featured->pluck('slug'))->all()
+        );
     }
 }

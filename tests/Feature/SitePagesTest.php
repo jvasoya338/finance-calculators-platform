@@ -18,8 +18,15 @@ class SitePagesTest extends TestCase
         $response->assertSee('Monthly EMI');
         $response->assertSee('Practical reading before bigger money decisions');
         $response->assertSee('Planning updates');
+        $response->assertSee('Search all calculators');
+        $response->assertSee('Open contact form');
+        $response->assertSee('Reviewed formulas');
+        $response->assertSee('Updated guide pages');
         $response->assertDontSee('This section supports finance updates');
         $response->assertDontSee('1 tools');
+        $response->assertDontSee('working finance calculators');
+        $response->assertDontSee('mailto:', false);
+        $response->assertDontSee('fingurutools@gmail.com');
     }
 
     public function test_calculator_page_renders_results_for_valid_input(): void
@@ -58,7 +65,7 @@ class SitePagesTest extends TestCase
         $this
             ->get(route('home'))
             ->assertOk()
-            ->assertSee('Auto detect · India fallback')
+            ->assertSee('Auto detect location')
             ->assertSee('India · INR')
             ->assertSee('₹', false);
     }

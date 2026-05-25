@@ -21,7 +21,7 @@
                 <label for="country" class="sr-only">Country</label>
                 <select id="country" name="country" onchange="this.form.submit()" class="max-w-[13rem] rounded-full border border-[rgba(31,78,140,0.18)] bg-white px-4 py-2 text-sm font-medium text-[#0B2A4A] shadow-sm outline-none">
                     <option value="auto" @selected(($siteCountryMode ?? 'auto') === 'auto')>
-                        Auto detect · India fallback
+                        Auto detect location
                     </option>
                     @foreach($siteCountries as $country)
                         <option value="{{ $country['code'] }}" @selected(($siteCountryMode ?? 'auto') === 'manual' && $siteCountry['code'] === $country['code'])>
@@ -47,7 +47,7 @@
                         <label for="country-mobile" class="mb-2 block text-xs font-semibold uppercase tracking-[0.2em] text-[rgba(11,42,74,0.56)]">Country</label>
                         <select id="country-mobile" name="country" onchange="this.form.submit()" class="w-full rounded-2xl border border-[rgba(31,78,140,0.18)] bg-white px-4 py-3 text-sm font-medium text-[#0B2A4A] outline-none">
                             <option value="auto" @selected(($siteCountryMode ?? 'auto') === 'auto')>
-                                Auto detect · India fallback
+                                Auto detect location
                             </option>
                             @foreach($siteCountries as $country)
                                 <option value="{{ $country['code'] }}" @selected(($siteCountryMode ?? 'auto') === 'manual' && $siteCountry['code'] === $country['code'])>

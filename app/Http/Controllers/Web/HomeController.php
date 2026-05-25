@@ -20,7 +20,7 @@ class HomeController extends Controller
             'tenure_type' => 'years',
         ];
         $featuredEmiResult = $calculatorService->calculate('emi-calculator', $featuredEmiPayload);
-        $allCalculators = CalculatorCatalog::indexable();
+        $featuredCalculators = CalculatorCatalog::featured();
         $guidePreviews = collect(config('guides'))
             ->only(['monthly-budget-framework', 'compounding-time-horizons', 'debt-payoff-strategy'])
             ->values();
@@ -28,11 +28,9 @@ class HomeController extends Controller
         return view('pages.home', [
             'seo' => SeoData::forHome(),
             'categories' => CalculatorCatalog::categories(),
-            'featuredCalculators' => CalculatorCatalog::featured(),
+            'featuredCalculators' => $featuredCalculators,
             'popularCalculators' => CalculatorCatalog::popular(),
-            'recentCalculators' => CalculatorCatalog::recent(),
-            'calculatorCount' => $allCalculators->count(),
-            'guideCount' => count(config('guides')),
+            'recentCalculators' => CalculatorCatalog::recentExcluding($featuredCalculators),
             'guidePreviews' => $guidePreviews,
             'featuredEmi' => [
                 'monthly_payment' => Arr::get($featuredEmiResult, 'summary.0.value'),

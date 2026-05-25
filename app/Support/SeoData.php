@@ -230,7 +230,6 @@ class SeoData
             '@type' => 'Organization',
             'name' => config('finance.brand.company', config('finance.brand.name')),
             'url' => config('finance.brand.website', url('/')),
-            'email' => config('finance.brand.support_email'),
             'description' => config('finance.brand.description'),
         ];
     }
