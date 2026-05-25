@@ -44,6 +44,14 @@
             </div>
         </div>
 
+        <div class="mt-6 grid gap-4 rounded-3xl border border-[rgba(31,78,140,0.12)] bg-white/70 p-5 text-sm text-[rgba(11,42,74,0.72)] md:grid-cols-[1fr,auto] md:items-center">
+            <div>
+                <p class="font-semibold text-[#0B2A4A]">Need help or want to suggest a finance guide?</p>
+                <p class="mt-1">Reach the FinguruTools team at <a href="mailto:{{ config('finance.brand.support_email') }}" class="font-semibold text-[#1F4E8C] hover:text-[#1FAE4B]">{{ config('finance.brand.support_email') }}</a>.</p>
+            </div>
+            <a href="{{ route('contact') }}" class="btn-primary inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition">Contact us</a>
+        </div>
+
         <div class="mt-6 flex flex-col gap-3 border-t border-[rgba(31,78,140,0.14)] pt-5 text-sm text-[rgba(11,42,74,0.66)] md:flex-row md:items-center md:justify-between">
             <p>© {{ now()->year }} {{ config('finance.brand.name') }} · <a href="{{ config('finance.brand.website') }}" class="font-medium text-[#1F4E8C] hover:text-[#1FAE4B]">{{ config('finance.brand.website') }}</a></p>
             <p>Educational estimates only. Not financial, tax, lending, or legal advice.</p>

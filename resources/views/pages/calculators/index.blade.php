@@ -15,7 +15,7 @@
                 <div class="grid gap-4 sm:grid-cols-[1fr,240px]">
                     <label class="space-y-2">
                         <span class="text-sm font-semibold text-[#0B2A4A]">Search calculators</span>
-                        <input type="search" class="form-input" placeholder="Search EMI, SIP, salary, mortgage..." data-calculator-search>
+                        <input type="search" name="q" value="{{ $searchQuery ?? '' }}" class="form-input" placeholder="Search EMI, SIP, salary, mortgage..." data-calculator-search>
                     </label>
                     <label class="space-y-2">
                         <span class="text-sm font-semibold text-[#0B2A4A]">Filter by category</span>

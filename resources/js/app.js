@@ -29,4 +29,5 @@ if (cards.length && (searchInput || categoryFilter)) {
 
     searchInput?.addEventListener('input', applyFilters);
     categoryFilter?.addEventListener('change', applyFilters);
+    applyFilters();
 }

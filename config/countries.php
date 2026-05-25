@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'default' => 'us',
+    'default' => 'in',
     'supported' => [
         'in' => [
             'code' => 'in',

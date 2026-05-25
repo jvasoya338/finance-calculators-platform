@@ -3,7 +3,7 @@
 <article
     class="group rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-6 shadow-[0_24px_60px_rgba(11,42,74,0.07)] transition duration-300 hover:-translate-y-1 hover:border-[rgba(31,78,140,0.45)] hover:bg-[rgba(31,78,140,0.03)]"
     data-calculator-card
-    data-title="{{ strtolower($calculator['title']) }}"
+    data-title="{{ strtolower($calculator['title'].' '.$calculator['short_description'].' '.$calculator['slug'].' '.$calculator['category_name']) }}"
     data-category="{{ $calculator['category'] }}"
 >
     <div class="mb-4 flex items-center gap-3">

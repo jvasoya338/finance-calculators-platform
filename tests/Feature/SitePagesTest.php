@@ -14,6 +14,12 @@ class SitePagesTest extends TestCase
         $response->assertSee('Premium finance tools for smarter everyday decisions.');
         $response->assertSee('Browse all calculators');
         $response->assertSee('People use FinguruTools for very different reasons.');
+        $response->assertSee('EMI Calculator');
+        $response->assertSee('Monthly EMI');
+        $response->assertSee('Practical reading before bigger money decisions');
+        $response->assertSee('Planning updates');
+        $response->assertDontSee('This section supports finance updates');
+        $response->assertDontSee('1 tools');
     }
 
     public function test_calculator_page_renders_results_for_valid_input(): void
@@ -47,13 +53,14 @@ class SitePagesTest extends TestCase
         $response->assertSee('INR', false);
     }
 
-    public function test_default_country_falls_back_to_united_states_without_geo_signal(): void
+    public function test_default_country_falls_back_to_india_without_geo_signal(): void
     {
         $this
             ->get(route('home'))
             ->assertOk()
-            ->assertSee('Auto detect · US default')
-            ->assertDontSee('selected>IN');
+            ->assertSee('Auto detect · India fallback')
+            ->assertSee('India · INR')
+            ->assertSee('₹', false);
     }
 
     public function test_category_and_sitemap_pages_are_available(): void

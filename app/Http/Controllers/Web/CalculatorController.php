@@ -9,11 +9,12 @@ use App\Support\CalculatorCatalog;
 use App\Support\CalculatorEditorial;
 use App\Support\CountryContext;
 use App\Support\SeoData;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class CalculatorController extends Controller
 {
-    public function index(): View
+    public function index(Request $request): View
     {
         return view('pages.calculators.index', [
             'seo' => SeoData::base([
@@ -24,6 +25,7 @@ class CalculatorController extends Controller
             ]),
             'calculators' => CalculatorCatalog::all(),
             'categories' => CalculatorCatalog::categories(),
+            'searchQuery' => trim((string) $request->query('q')),
             'breadcrumbs' => [
                 ['label' => 'Home', 'url' => route('home')],
                 ['label' => 'Calculators', 'url' => route('calculators.index')],
