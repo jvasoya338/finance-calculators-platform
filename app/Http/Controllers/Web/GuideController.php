@@ -43,6 +43,7 @@ class GuideController extends Controller
             ->filter()
             ->values();
         $editorial = GuideEditorial::forGuide($page);
+        $metadata = GuideEditorial::metadata($page);
         $faqs = array_merge($page['faqs'] ?? [], $editorial['extra_faqs'] ?? []);
 
         return view('pages.guides.show', [
@@ -53,11 +54,13 @@ class GuideController extends Controller
                 'json_ld' => [
                     SeoData::websiteSchema(),
                     SeoData::breadcrumbSchema($breadcrumbs),
+                    SeoData::articleSchema($page, $metadata),
                     SeoData::faqSchema($faqs),
                 ],
             ]),
             'page' => $page,
             'editorial' => $editorial,
+            'metadata' => $metadata,
             'faqs' => $faqs,
             'breadcrumbs' => $breadcrumbs,
             'relatedCalculators' => $relatedCalculators,

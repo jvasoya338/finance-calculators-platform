@@ -178,9 +178,11 @@
         </div>
         <div class="mt-8 grid gap-5 md:grid-cols-3">
             @foreach($guidePreviews as $guide)
+                @php($metadata = \App\Support\GuideEditorial::metadata($guide))
                 <a href="{{ route('guides.show', ['guide' => $guide['slug']]) }}" class="rounded-[1.8rem] border border-[rgba(31,78,140,0.1)] bg-white p-6 shadow-[0_18px_40px_rgba(11,42,74,0.05)] transition hover:-translate-y-1 hover:border-[rgba(31,78,140,0.45)] hover:bg-[rgba(31,78,140,0.03)]">
                     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[#1F4E8C]">Guide article</p>
                     <h3 class="mt-4 font-display text-2xl font-semibold text-[#0B2A4A]">{{ $guide['title'] }}</h3>
+                    <p class="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(11,42,74,0.56)]">By {{ $metadata['author_name'] }} · Updated {{ $metadata['updated_display'] }}</p>
                     <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ Str::limit($guide['intro'], 180) }}</p>
                 </a>
             @endforeach

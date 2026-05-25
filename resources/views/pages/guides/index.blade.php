@@ -47,9 +47,11 @@
 
         <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             @foreach($guides as $guide)
+                @php($metadata = \App\Support\GuideEditorial::metadata($guide))
                 <a href="{{ route('guides.show', ['guide' => $guide['slug']]) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.35)] hover:bg-[rgba(31,78,140,0.02)]">
                     <p class="eyebrow">Guide article</p>
                     <h2 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">{{ $guide['title'] }}</h2>
+                    <p class="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-[rgba(11,42,74,0.56)]">By {{ $metadata['author_name'] }} · Updated {{ $metadata['updated_display'] }}</p>
                     <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $guide['meta_description'] }}</p>
                     <span class="mt-5 inline-flex items-center text-sm font-semibold text-[#1F4E8C]">Read guide →</span>
                 </a>

@@ -190,6 +190,28 @@ class SeoData
         ];
     }
 
+    public static function articleSchema(array $page, array $metadata): array
+    {
+        return [
+            '@context' => 'https://schema.org',
+            '@type' => 'Article',
+            'headline' => $page['headline'],
+            'description' => $page['meta_description'],
+            'datePublished' => $metadata['published'],
+            'dateModified' => $metadata['updated'],
+            'author' => [
+                '@type' => 'Organization',
+                'name' => $metadata['author_name'],
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => config('finance.brand.company', config('finance.brand.name')),
+                'url' => config('finance.brand.website', url('/')),
+            ],
+            'mainEntityOfPage' => route('guides.show', ['guide' => $page['slug']]),
+        ];
+    }
+
     public static function websiteSchema(): array
     {
         return [

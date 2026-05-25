@@ -4,6 +4,35 @@ namespace App\Support;
 
 class GuideEditorial
 {
+    public static function metadata(array $page): array
+    {
+        $dates = [
+            'mortgage-offers' => ['published' => '2026-03-28', 'updated' => '2026-05-25'],
+            'compounding-time-horizons' => ['published' => '2026-03-29', 'updated' => '2026-05-25'],
+            'monthly-budget-framework' => ['published' => '2026-03-30', 'updated' => '2026-05-25'],
+            'debt-payoff-strategy' => ['published' => '2026-04-01', 'updated' => '2026-05-25'],
+            'take-home-pay-planning' => ['published' => '2026-04-03', 'updated' => '2026-05-25'],
+            'emergency-fund-planning' => ['published' => '2026-04-05', 'updated' => '2026-05-25'],
+            'choosing-loan-term' => ['published' => '2026-04-07', 'updated' => '2026-05-25'],
+            'down-payment-vs-cash-reserves' => ['published' => '2026-04-09', 'updated' => '2026-05-25'],
+            'understanding-vat-inclusive-pricing' => ['published' => '2026-04-11', 'updated' => '2026-05-25'],
+            'salary-offer-net-pay' => ['published' => '2026-04-13', 'updated' => '2026-05-25'],
+            'bitcoin-dca-discipline' => ['published' => '2026-04-15', 'updated' => '2026-05-25'],
+            'crypto-position-sizing' => ['published' => '2026-04-17', 'updated' => '2026-05-25'],
+        ];
+
+        $date = $dates[$page['slug']] ?? ['published' => '2026-04-01', 'updated' => '2026-05-25'];
+
+        return [
+            'author_name' => 'FinguruTools Finance Content Team',
+            'reviewed_by' => 'TJVerse Group editorial review',
+            'published' => $date['published'],
+            'updated' => $date['updated'],
+            'published_display' => date('F j, Y', strtotime($date['published'])),
+            'updated_display' => date('F j, Y', strtotime($date['updated'])),
+        ];
+    }
+
     public static function forGuide(array $page): array
     {
         $slug = $page['slug'];

@@ -9,6 +9,12 @@
             <h1 class="mt-4 font-display text-5xl font-semibold tracking-tight text-[#0B2A4A]">{{ $page['headline'] }}</h1>
             <p class="mt-6 text-lg leading-8 text-[rgba(11,42,74,0.72)]">{{ $page['intro'] }}</p>
 
+            <div class="mt-6 flex flex-wrap gap-3 text-sm text-[rgba(11,42,74,0.72)]">
+                <span class="rounded-full border border-[rgba(31,78,140,0.12)] bg-white px-4 py-2">By {{ $metadata['author_name'] }}</span>
+                <time datetime="{{ $metadata['published'] }}" class="rounded-full border border-[rgba(31,78,140,0.12)] bg-white px-4 py-2">Published {{ $metadata['published_display'] }}</time>
+                <time datetime="{{ $metadata['updated'] }}" class="rounded-full border border-[rgba(31,174,75,0.18)] bg-[rgba(31,174,75,0.08)] px-4 py-2">Updated {{ $metadata['updated_display'] }}</time>
+            </div>
+
             <div class="mt-8 rounded-[1.6rem] border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.04)]">
                 <p class="text-xs font-semibold uppercase tracking-[0.22em] text-[#1F4E8C]">{{ $editorial['author']['label'] }}</p>
                 <p class="mt-3 text-lg font-semibold text-[#0B2A4A]">{{ $editorial['author']['name'] }}</p>

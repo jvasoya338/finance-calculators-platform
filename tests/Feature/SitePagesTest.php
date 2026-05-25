@@ -135,6 +135,10 @@ class SitePagesTest extends TestCase
         $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
             ->assertOk()
             ->assertSee('How to compare mortgage offers without focusing on rate alone')
+            ->assertSee('By FinguruTools Finance Content Team')
+            ->assertSee('Published March 28, 2026')
+            ->assertSee('Updated May 25, 2026')
+            ->assertSee('Article')
             ->assertSee('How we approach this topic')
             ->assertSee('Before you act on the result');
 
