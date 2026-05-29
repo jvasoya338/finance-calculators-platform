@@ -12,6 +12,7 @@ use App\Http\Controllers\Web\StaticPageController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/robots.txt', fn () => response(file_get_contents(public_path('robots.txt')), 200, ['Content-Type' => 'text/plain']));
 Route::get('/calculators', [CalculatorController::class, 'index'])->name('calculators.index');
 Route::get('/guides', [GuideController::class, 'index'])->name('guides.index');
 Route::get('/guides/{guide}', [GuideController::class, 'show'])

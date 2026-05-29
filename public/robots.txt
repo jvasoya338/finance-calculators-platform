@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://fingurutools.com/sitemap.xml

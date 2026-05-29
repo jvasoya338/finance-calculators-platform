@@ -70,6 +70,20 @@ class SitePagesTest extends TestCase
             ->assertSee('₹', false);
     }
 
+    public function test_www_host_redirects_to_canonical_domain(): void
+    {
+        $this
+            ->get('https://www.fingurutools.com/')
+            ->assertRedirect('https://fingurutools.com/');
+    }
+
+    public function test_robots_txt_points_to_absolute_sitemap_url(): void
+    {
+        $this->get('/robots.txt')
+            ->assertOk()
+            ->assertSee('Sitemap: https://fingurutools.com/sitemap.xml');
+    }
+
     public function test_category_and_sitemap_pages_are_available(): void
     {
         $this->get(route('categories.show', ['category' => 'investment-calculators']))
