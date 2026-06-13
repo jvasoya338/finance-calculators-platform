@@ -22,11 +22,24 @@ class SitePagesTest extends TestCase
         $response->assertSee('Open contact form');
         $response->assertSee('Reviewed formulas');
         $response->assertSee('Updated guide pages');
+        $response->assertSee('/build/assets/', false);
         $response->assertDontSee('This section supports finance updates');
         $response->assertDontSee('1 tools');
         $response->assertDontSee('working finance calculators');
         $response->assertDontSee('mailto:', false);
         $response->assertDontSee('fingurutools@gmail.com');
+    }
+
+    public function test_production_build_assets_are_available_for_direct_deploys(): void
+    {
+        $manifest = public_path('build/manifest.json');
+
+        $this->assertFileExists($manifest);
+
+        $assets = json_decode(file_get_contents($manifest), true);
+
+        $this->assertFileExists(public_path('build/'.$assets['resources/css/app.css']['file']));
+        $this->assertFileExists(public_path('build/'.$assets['resources/js/app.js']['file']));
     }
 
     public function test_calculator_page_renders_results_for_valid_input(): void
