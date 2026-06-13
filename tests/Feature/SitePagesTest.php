@@ -190,6 +190,27 @@ class SitePagesTest extends TestCase
             ->assertSee('Why this budgeting framework works in real life');
     }
 
+    public function test_all_guides_have_substantial_article_content(): void
+    {
+        foreach (config('guides') as $slug => $guide) {
+            $text = ($guide['intro'] ?? '').' ';
+
+            foreach ($guide['sections'] ?? [] as $section) {
+                $text .= ($section['heading'] ?? '').' '.implode(' ', $section['body'] ?? []).' ';
+            }
+
+            foreach ($guide['takeaways'] ?? [] as $takeaway) {
+                $text .= $takeaway.' ';
+            }
+
+            foreach ($guide['faqs'] ?? [] as $faq) {
+                $text .= ($faq['question'] ?? '').' '.($faq['answer'] ?? '').' ';
+            }
+
+            $this->assertGreaterThanOrEqual(800, str_word_count(strip_tags($text)), "{$slug} should have at least 800 words of guide content.");
+        }
+    }
+
     public function test_overlapping_calculators_are_noindexed(): void
     {
         $this->get(route('calculators.show', ['calculator' => 'currency-converter']))

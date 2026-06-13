@@ -39,6 +39,20 @@ return [
                     'This is why down payment size, emergency reserves, and future plans should all be considered together. A mortgage that looks efficient but drains every reserve may create more stress than a slightly more expensive option that keeps better liquidity.',
                 ],
             ],
+            [
+                'heading' => 'Use one consistent comparison sheet',
+                'body' => [
+                    'A practical mortgage comparison works best when every offer is entered into the same simple structure. Keep the property price, down payment, loan term, rate type, fees, and expected monthly payment visible in one place. This reduces the chance that one attractive number hides a weaker detail elsewhere in the offer.',
+                    'It also helps you avoid comparing one lender quote that includes certain charges with another quote that leaves them out. If the assumptions are not aligned, the comparison can look cleaner than it really is. Before choosing, normalize the numbers and write down what is included, what is estimated, and what still needs confirmation from the lender.',
+                ],
+            ],
+            [
+                'heading' => 'Recheck the offer before committing',
+                'body' => [
+                    'A mortgage offer should be reviewed again when the final documents arrive. Small differences in fees, rate lock timing, insurance assumptions, or closing costs can change the practical value of the loan. The comparison that looked strongest at the quote stage should still make sense when the final terms are visible.',
+                    'This final review is also a good time to test a slightly higher payment or an unexpected first-year cost in your budget. If the loan remains comfortable under a mild stress test, the decision is usually stronger than one that works only under perfect assumptions.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Compare total repayment, not just the headline rate.',
@@ -84,6 +98,28 @@ return [
                 'body' => [
                     'Over long periods, compounding becomes dramatic because gains continue to build on earlier gains. This is why starting earlier can matter more than starting with a much larger amount later. Time magnifies consistency, and missing a decade can be hard to fully replace with bigger contributions near the end.',
                     'For retirement and long-term wealth planning, the lesson is simple: time is one of the strongest inputs in the equation. Rate matters, contribution size matters, but duration is often the factor that changes the shape of the result most dramatically.',
+                ],
+            ],
+            [
+                'heading' => 'Rate assumptions should stay realistic',
+                'body' => [
+                    'Compounding examples can become misleading when the return assumption is too optimistic. A high rate may create an exciting future value, but it can also make the plan look easier than it really is. A more useful projection tests a conservative rate, a moderate rate, and a stronger rate so the final decision is not built around one perfect outcome.',
+                    'This is especially important for market-linked investments where returns are uneven. The calculator uses a steady annual return to make the math understandable, but real portfolios move up and down. Treat the result as a planning estimate, then ask whether the contribution amount still makes sense if the final value lands below the optimistic scenario.',
+                ],
+            ],
+            [
+                'heading' => 'Contributions and time work together',
+                'body' => [
+                    'Many people try to solve a late start by making very large contributions for a short period. That can help, but it may not fully replace the advantage of time. Earlier contributions have more years to grow, while later contributions have less runway even if they are larger.',
+                    'A stronger planning habit is to test both levers together. Increase the monthly contribution slightly, extend the time horizon where possible, and compare how each change affects the result. That gives you a clearer sense of whether the goal needs more money, more patience, or a more realistic target.',
+                ],
+            ],
+            [
+                'heading' => 'Review the path, not only the final value',
+                'body' => [
+                    'A compounding projection can make the final number feel like the only thing that matters. In real planning, the path matters too. You need to know whether the monthly contribution is comfortable, whether the money may be needed before the horizon ends, and whether the plan can continue during weaker income months.',
+                    'This is why it helps to review the projection at regular intervals. If income grows, you may increase contributions. If expenses rise, you may pause or reduce them temporarily. The value of a compounding plan is not that it never changes. The value is that the habit continues with enough consistency for time to do meaningful work.',
+                    'A good projection should therefore answer two questions. The first is what the final value might become. The second is whether the contribution habit is realistic enough to survive normal life. When both answers are strong, compounding becomes a practical planning tool instead of only a nice chart.',
                 ],
             ],
         ],
@@ -348,6 +384,28 @@ return [
                     'Consistency matters more than the appearance of ambition. A modest savings plan based on real cash flow usually outperforms a larger target that is abandoned after a few difficult months.',
                 ],
             ],
+            [
+                'heading' => 'Net income also improves debt decisions',
+                'body' => [
+                    'Debt payments should be judged against the cash that actually arrives, not against a salary figure shown before deductions. A loan or credit card payment may appear small against gross income, but it can consume a much larger share of take-home pay. That difference matters when the same account also has to cover rent, groceries, transport, insurance, and savings.',
+                    'Using take-home pay makes debt planning more honest. It helps you see whether an extra repayment is genuinely affordable or whether it would create pressure elsewhere in the month. This is especially useful when comparing a faster payoff plan with a more flexible repayment schedule.',
+                ],
+            ],
+            [
+                'heading' => 'Build a monthly plan from the money that arrives',
+                'body' => [
+                    'A practical monthly plan starts with the deposit that reaches your bank account. From there, subtract essential bills, minimum debt payments, planned savings, and normal flexible spending. This gives you a clearer view of whether the month has a real surplus or only looks comfortable because the budget started from the wrong number.',
+                    'This approach is also easier to repeat. You do not have to mentally adjust every category for deductions because the starting point already reflects reality. When income changes, bonuses arrive, or deductions shift, update the take-home number first and let the rest of the plan respond from there.',
+                ],
+            ],
+            [
+                'heading' => 'Use gross income only for the right decisions',
+                'body' => [
+                    'Gross income still has a place. It is useful for comparing compensation packages, estimating tax brackets, negotiating raises, or understanding how lenders may initially view income. The mistake is using gross income for every monthly spending decision. A number can be important without being the right number for daily planning.',
+                    'A better system gives each income figure a job. Gross income helps with broad comparison and official paperwork. Take-home pay helps with budgets, savings, debt payments, and lifestyle commitments. Once those roles are separated, the plan becomes less confusing because each decision starts from the number that actually fits it.',
+                    'This also improves conversations with family members or partners. Instead of arguing from a headline salary, everyone can see the amount that is really available and decide how it should be divided between essentials, goals, and flexible spending.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Use actual take-home pay as the starting point for budgeting decisions.',
@@ -362,6 +420,14 @@ return [
             [
                 'question' => 'Why does my budget feel tight even with a strong salary?',
                 'answer' => 'That often happens when deductions are larger than expected or when spending decisions were made using gross income rather than the amount actually available each month.',
+            ],
+            [
+                'question' => 'How should bonuses or variable pay fit into take-home planning?',
+                'answer' => 'Treat variable pay separately from normal monthly income unless it is highly predictable. It can support savings, debt reduction, or irregular expenses, but the core budget is usually safer when built around reliable take-home pay.',
+            ],
+            [
+                'question' => 'What should I do if deductions change during the year?',
+                'answer' => 'Update the take-home number first, then review fixed commitments, savings targets, and flexible spending. A small payroll change can affect the whole monthly plan if the budget has very little margin.',
             ],
         ],
         'related_calculators' => ['take-home-salary-calculator', 'salary-calculator', 'budget-calculator'],
@@ -395,6 +461,28 @@ return [
                     'The purpose of the emergency fund is not investment optimization. It is financial stability. Accessibility, clarity, and habit matter more than chasing a tiny return difference.',
                 ],
             ],
+            [
+                'heading' => 'Do not build the fund by breaking the rest of the plan',
+                'body' => [
+                    'An emergency fund should make your finances calmer, not make every normal month feel impossible. If the contribution is so high that you regularly use credit cards or skip important bills, the plan is too aggressive. The better approach is to choose an amount that can continue even during average months, then increase it when income or expenses improve.',
+                    'This is why the emergency fund target should be connected to your budget. Start by identifying essential monthly costs, then decide how quickly you can build one small layer of protection. The right pace is the one that protects your future without destabilizing the present.',
+                ],
+            ],
+            [
+                'heading' => 'Review the fund when your life changes',
+                'body' => [
+                    'Emergency fund needs are not fixed forever. A single person with stable income may need a different reserve than a household with dependents, variable income, or large fixed commitments. Job changes, rent increases, new loans, medical needs, or family responsibilities can all change the amount that feels safe.',
+                    'A simple review every few months is enough for many people. Ask whether the fund could cover the most likely short-term shocks, whether it is still easy to access, and whether it has been used for non-emergencies. If the answer is uncomfortable, adjust the target or rebuild the habit gradually.',
+                ],
+            ],
+            [
+                'heading' => 'Decide what counts as an emergency before spending',
+                'body' => [
+                    'Emergency funds become weaker when the definition of emergency is unclear. A true emergency usually protects health, income, housing, transport, or essential family stability. A sale, vacation, lifestyle upgrade, or predictable annual bill may be important, but it should usually be planned separately.',
+                    'Writing this boundary in advance makes the fund easier to protect. If a non-emergency expense appears, the better answer may be a sinking fund, a delayed purchase, or a smaller version of the plan. Keeping the emergency reserve separate prevents every unusual expense from draining the same account.',
+                    'This discipline matters because rebuilding the fund takes time. The goal is not to avoid using emergency savings when they are genuinely needed. The goal is to make sure the money is still there when a real shock appears.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Start with a realistic first milestone instead of waiting for a perfect target.',
@@ -409,6 +497,14 @@ return [
             [
                 'question' => 'Should I invest my emergency fund?',
                 'answer' => 'Emergency savings usually work best in a low-risk, accessible place because stability and availability matter more than return.',
+            ],
+            [
+                'question' => 'What if I need to use part of the emergency fund?',
+                'answer' => 'Use it when the expense is genuinely urgent, then rebuild it deliberately. The fund is doing its job when it prevents debt or protects essentials during a real disruption.',
+            ],
+            [
+                'question' => 'Can I build an emergency fund while paying debt?',
+                'answer' => 'Often yes. A small starter reserve can prevent new borrowing while you work on debt payoff. After the reserve exists, you can decide how to balance extra debt payments with continued saving.',
             ],
         ],
         'related_calculators' => ['savings-calculator', 'budget-calculator', 'expense-calculator'],
@@ -442,6 +538,28 @@ return [
                     'This process turns the decision from guesswork into a structured comparison. You will often find that one term gives a much better balance between affordability and long-term cost than the others.',
                 ],
             ],
+            [
+                'heading' => 'Match the term to income stability',
+                'body' => [
+                    'A borrower with stable income, strong savings, and low fixed expenses may be able to handle a shorter term comfortably. Someone with variable income, dependents, or other large commitments may need more monthly flexibility. The right loan term depends on the payment, but also on how dependable the rest of the financial picture is.',
+                    'This is why lender approval should not be the only test. A lender may approve a payment that still feels heavy in real life. Before choosing the term, compare the payment against take-home income, existing obligations, and the emergency reserve you want to protect.',
+                ],
+            ],
+            [
+                'heading' => 'Consider prepayment flexibility',
+                'body' => [
+                    'Some borrowers choose a longer term for flexibility and then make extra payments when cash flow allows. That can work well if the loan allows prepayment without heavy penalties. In that case, the borrower keeps a lower required payment while still having the option to reduce interest faster.',
+                    'The tradeoff is discipline. If extra payments are only planned but rarely made, the longer term may simply become more expensive. Check the loan rules, decide whether extra payments are realistic, and use the calculator to compare the required payment with the voluntary payoff plan.',
+                ],
+            ],
+            [
+                'heading' => 'Review the term alongside other goals',
+                'body' => [
+                    'A loan term does not exist separately from the rest of your finances. The payment affects emergency savings, retirement contributions, education planning, rent comfort, insurance, and everyday spending. A shorter term may save interest, but it can also slow progress on other goals if it absorbs too much cash flow.',
+                    'The best term is usually the one that creates a balanced monthly plan. If the shorter term still leaves room for savings and normal life, it may be a strong choice. If it leaves no breathing room, a slightly longer term with planned extra payments may be more sustainable.',
+                    'Before signing, compare the term against at least one full monthly budget. This makes the choice more practical because it shows the loan as part of real cash flow rather than a separate borrowing calculation.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Do not choose a term based only on the lowest monthly payment.',
@@ -456,6 +574,14 @@ return [
             [
                 'question' => 'What is the safest way to compare loan terms?',
                 'answer' => 'Test at least a few realistic term options and compare monthly payment, total repayment, and the room left in your monthly budget.',
+            ],
+            [
+                'question' => 'When does a longer term make sense?',
+                'answer' => 'A longer term can make sense when it protects monthly cash flow and the loan allows extra payments later. It becomes weaker if the lower payment simply leads to more spending and much higher total interest.',
+            ],
+            [
+                'question' => 'Should I choose a term based on lender approval?',
+                'answer' => 'No. Approval is only one signal. You should still check the payment against take-home income, emergency savings, existing debt, and normal monthly expenses.',
             ],
         ],
         'related_calculators' => ['loan-calculator', 'emi-calculator', 'car-loan-calculator'],
@@ -489,6 +615,28 @@ return [
                     'This is not only a finance formula question. It is also a risk-management question. The best choice is the one that reduces long-term strain rather than maximizing one metric alone.',
                 ],
             ],
+            [
+                'heading' => 'Think about first-year ownership costs',
+                'body' => [
+                    'The first year after a property purchase can be more expensive than expected. Moving, small repairs, deposits, furniture, maintenance, insurance adjustments, and local charges can all arrive close together. If the down payment uses nearly every available rupee or dollar, even ordinary setup costs can create stress.',
+                    'A healthier plan leaves money for the period after closing. That reserve does not mean the down payment is weak. It means the purchase is being planned as a real-life transition instead of only a loan calculation.',
+                ],
+            ],
+            [
+                'heading' => 'The best down payment is rarely one number for everyone',
+                'body' => [
+                    'Some buyers benefit from a larger down payment because it reduces the monthly payment enough to make the home comfortable. Others are better served by keeping more cash because their income is variable or the property may need repairs. The same percentage can be wise for one household and too aggressive for another.',
+                    'Use the calculator to find the point where adding more down payment creates only a small monthly improvement. If the next increase saves little but removes a lot of liquidity, keeping extra reserves may be the more balanced choice.',
+                ],
+            ],
+            [
+                'heading' => 'Protect the reserve after the purchase too',
+                'body' => [
+                    'Keeping cash after closing is only useful if the reserve remains protected. New owners often face a rush of purchases after moving in, and many of them feel urgent. Without a clear boundary, the reserve meant for repairs and emergencies can disappear into furniture, upgrades, or convenience spending.',
+                    'A practical approach is to separate the reserve into categories. Keep one amount for true emergencies, another for expected setup costs, and another for optional improvements. That way a planned purchase does not quietly consume the money that was supposed to protect the household.',
+                    'This structure also makes the down-payment decision easier. You can see not only how much cash remains, but what job each part of that cash will do after the purchase is complete.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Larger down payments usually improve monthly cost and total interest.',
@@ -503,6 +651,18 @@ return [
             [
                 'question' => 'How can I compare down payment options well?',
                 'answer' => 'Run a few realistic scenarios in the mortgage or home loan calculator and compare the monthly benefit with the cash you would still have left.',
+            ],
+            [
+                'question' => 'What costs should I keep cash for after buying?',
+                'answer' => 'Common post-purchase needs include moving, basic repairs, furnishing, insurance adjustments, utility deposits, and emergency reserves. These should be visible before deciding how much cash to put down.',
+            ],
+            [
+                'question' => 'Can a smaller down payment ever be the safer choice?',
+                'answer' => 'Yes. If a larger down payment leaves the household with too little liquidity, a smaller down payment may create a more resilient plan even if the loan payment is slightly higher.',
+            ],
+            [
+                'question' => 'How often should I revisit the reserve after buying?',
+                'answer' => 'Review it after the first few months of ownership and again after any major repair or income change. The reserve should match the real costs you are now seeing, not only the estimate made before purchase.',
             ],
         ],
         'related_calculators' => ['mortgage-calculator', 'home-loan-calculator', 'budget-calculator'],
@@ -536,6 +696,28 @@ return [
                     'The safest approach is to decide whether you want to compare net values or final payable totals, then convert everything into the same frame before drawing conclusions.',
                 ],
             ],
+            [
+                'heading' => 'Invoice review needs the same discipline',
+                'body' => [
+                    'VAT-inclusive pricing is not only a shopping issue. It also matters when reviewing invoices, supplier quotes, subscription renewals, and reimbursable expenses. If the invoice shows a final total but your accounting or budgeting process needs the pre-tax amount, you need to separate the two correctly.',
+                    'This helps avoid mistakes in margin planning and expense tracking. A business owner may care about the net revenue or cost, while a consumer may care about the final amount paid. Both views are valid, but they should not be mixed inside the same decision.',
+                ],
+            ],
+            [
+                'heading' => 'Cross-country comparisons need extra care',
+                'body' => [
+                    'VAT and GST rates vary by country, and the way prices are displayed can vary too. A price that looks higher in one market may already include tax, while another market may show a lower pre-tax amount that rises at checkout. Without normalizing the tax treatment, the comparison can be misleading.',
+                    'When comparing across countries, write down the rate, whether the starting amount is inclusive or exclusive, and whether the result should be viewed as a net value or a final payable total. That simple structure prevents a small tax-mode mistake from becoming a larger budgeting error.',
+                ],
+            ],
+            [
+                'heading' => 'Inclusive pricing can affect margins and discounts',
+                'body' => [
+                    'For businesses, VAT-inclusive pricing can change how discounts and margins are understood. A discount on the gross price does not all reduce the supplier revenue in the same way if part of that price is tax. To understand the real commercial effect, separate the net value from the tax portion before judging margin.',
+                    'The same idea helps consumers compare promotions. A discount may look attractive, but the final payable total and the pre-tax value can tell slightly different stories. If you need the business value, use the net figure. If you need the budget impact, use the gross total.',
+                    'Keeping both views clear reduces mistakes in quotes, invoices, and planning. The calculator is useful because it forces the tax mode to be explicit instead of letting the comparison rely on assumptions.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Inclusive pricing already contains the tax amount.',
@@ -550,6 +732,18 @@ return [
             [
                 'question' => 'Why do inclusive and exclusive totals create confusion?',
                 'answer' => 'Because the same rate is involved, but the starting amount is different. Gross totals already contain tax, while net totals do not.',
+            ],
+            [
+                'question' => 'Why is multiplying the gross total by the VAT rate wrong?',
+                'answer' => 'Because the gross total already includes tax. To find the VAT portion, you need to divide the gross total by the tax-inclusive factor and separate the base value from the tax amount.',
+            ],
+            [
+                'question' => 'Should I compare quotes before or after VAT?',
+                'answer' => 'Use the view that matches the decision. Consumers usually care about the final payable amount, while businesses may need the net amount for margin, accounting, or reimbursement planning.',
+            ],
+            [
+                'question' => 'Can the same calculator help with GST?',
+                'answer' => 'The logic is similar when you need to separate a tax-inclusive total from the base amount, but you should use the correct local rate and confirm any official reporting rules for your country.',
             ],
         ],
         'related_calculators' => ['vat-calculator', 'gst-calculator', 'sales-tax-calculator'],
@@ -583,6 +777,28 @@ return [
                     'A strong offer is not only the one with the largest number. It is the one that supports your broader financial life most effectively.',
                 ],
             ],
+            [
+                'heading' => 'Benefits and costs can change the real value',
+                'body' => [
+                    'A salary offer should also be compared with benefits, commuting costs, work setup, insurance, paid leave, retirement contributions, and any predictable out-of-pocket costs. A slightly lower salary with stronger benefits or lower commuting expenses can sometimes leave the person better off than a higher headline salary.',
+                    'The reverse can also happen. A higher salary may be less attractive if it comes with expensive relocation, longer travel, weaker benefits, or irregular working costs. Net pay is the foundation, but the full offer comparison should include the costs required to earn that pay.',
+                ],
+            ],
+            [
+                'heading' => 'Compare monthly life, not only annual salary',
+                'body' => [
+                    'Annual salary figures are useful for negotiation, but most financial pressure is monthly. Rent, EMIs, subscriptions, groceries, transport, and savings goals all compete for monthly cash flow. Converting an offer into estimated monthly take-home pay makes the decision easier to connect to real life.',
+                    'Once you have that monthly number, test the same budget under each offer. If one role creates more savings room, lower stress, or better resilience after fixed costs, that difference may matter more than a small gap in gross salary.',
+                ],
+            ],
+            [
+                'heading' => 'Use the offer comparison before negotiating',
+                'body' => [
+                    'A net-pay comparison can also improve salary negotiation. Instead of asking only for a higher gross number, you can identify what actually changes your monthly life. That may be salary, a transport allowance, health coverage, retirement contribution, remote-work support, or a joining bonus.',
+                    'This makes the negotiation more practical. If one benefit reduces a real monthly cost, it may be worth more than it first appears. If a larger salary is mostly absorbed by deductions or new expenses, the headline improvement may be less useful than expected.',
+                    'Before accepting, compare each offer under the same assumptions and write down the monthly difference. A decision that looks obvious from the annual salary may become more nuanced once take-home pay, benefits, costs, and lifestyle impact are viewed together.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Compare salary offers using both gross income and estimated net pay.',
@@ -597,6 +813,18 @@ return [
             [
                 'question' => 'Why can two similar salaries feel very different in real life?',
                 'answer' => 'Taxes, deductions, commuting costs, benefits, and local living expenses can materially change how much usable income remains each month.',
+            ],
+            [
+                'question' => 'How should I compare a higher salary with weaker benefits?',
+                'answer' => 'Estimate the monthly value of the benefits you would lose or gain, then compare the final take-home effect. A higher salary can be less useful if it also creates higher costs.',
+            ],
+            [
+                'question' => 'Should relocation costs affect my salary decision?',
+                'answer' => 'Yes. Rent, transport, deposits, moving costs, and local prices can change the real value of an offer. A net-pay comparison is stronger when those costs are included.',
+            ],
+            [
+                'question' => 'What if one offer has variable bonus pay?',
+                'answer' => 'Separate guaranteed pay from variable bonus pay. Use guaranteed take-home income for the normal budget, then treat bonus amounts as upside for savings, debt payoff, or planned irregular costs.',
             ],
         ],
         'related_calculators' => ['take-home-salary-calculator', 'salary-calculator', 'hourly-wage-calculator'],
@@ -630,6 +858,28 @@ return [
                     'That is why a crypto calculator is helpful. It lets you test contribution size and time horizon without pretending the asset is risk free.',
                 ],
             ],
+            [
+                'heading' => 'DCA should have clear rules before volatility arrives',
+                'body' => [
+                    'A DCA plan is easier to follow when the rules are written before the market becomes emotional. Decide the contribution amount, frequency, review schedule, and maximum allocation in advance. That way the plan is not rebuilt every time Bitcoin rises quickly or falls sharply.',
+                    'Clear rules also make it easier to pause or adjust responsibly. If income falls, debt pressure rises, or emergency savings are depleted, the DCA amount may need to change. Discipline does not mean ignoring real-life changes. It means making changes deliberately instead of reacting to market noise.',
+                ],
+            ],
+            [
+                'heading' => 'Measure the plan against your whole portfolio',
+                'body' => [
+                    'A small recurring Bitcoin purchase can become a larger portfolio position over time. That is why DCA should be reviewed alongside cash, debt, traditional investments, and other goals. A plan that started as a small experiment may need rebalancing if crypto becomes too large relative to everything else.',
+                    'This broader view helps keep the decision grounded. The goal is not only to keep buying. The goal is to make sure the recurring purchase still fits your risk tolerance, time horizon, and financial responsibilities.',
+                ],
+            ],
+            [
+                'heading' => 'Record the reason for the plan',
+                'body' => [
+                    'A DCA plan is easier to maintain when the reason for it is written down. The reason might be long-term exposure, avoiding timing pressure, limiting emotional decisions, or keeping crypto as a small part of a broader portfolio. Without that reason, the plan can drift whenever price action becomes exciting or frightening.',
+                    'Writing the reason also helps with review. If the original purpose no longer fits your finances, you can adjust the plan without feeling like you failed. If the purpose still fits, the written rule can help you avoid overreacting to short-term volatility.',
+                    'The strongest DCA plans are boring by design. They define the amount, frequency, limit, and review process before the market tests your emotions. That structure is what makes the plan useful.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Bitcoin DCA reduces the pressure of trying to time a single perfect entry.',
@@ -644,6 +894,18 @@ return [
             [
                 'question' => 'Should DCA replace an emergency fund or debt payments?',
                 'answer' => 'Usually no. Crypto exposure is generally stronger when basic financial stability is already in place.',
+            ],
+            [
+                'question' => 'How often should I review a Bitcoin DCA plan?',
+                'answer' => 'A monthly or quarterly review is enough for many people. The review should check whether the amount still fits the budget, whether the allocation is too large, and whether the original reason still makes sense.',
+            ],
+            [
+                'question' => 'What is the biggest mistake with DCA?',
+                'answer' => 'The biggest mistake is treating DCA as risk-free. It can reduce timing pressure, but it does not remove volatility, concentration risk, or the need for position limits.',
+            ],
+            [
+                'question' => 'Should I increase DCA after a price drop?',
+                'answer' => 'Only if the larger amount still fits your budget and risk limit. A price drop can make buying feel attractive, but the plan should not grow beyond what your wider finances can support.',
             ],
         ],
         'related_calculators' => ['bitcoin-dca-calculator', 'budget-calculator', 'investment-calculator'],
@@ -677,6 +939,28 @@ return [
                     'Sizing decisions feel more stable when they are small enough to survive volatility and large enough to remain meaningful. The right size is usually the one you can hold through uncertainty without destabilizing everything else.',
                 ],
             ],
+            [
+                'heading' => 'Define the maximum loss you can tolerate',
+                'body' => [
+                    'Before entering a crypto position, it helps to translate volatility into actual money. A 30 percent or 50 percent drawdown can sound abstract until you apply it to your own position size. Once the possible loss is shown in currency terms, the right position size often becomes clearer.',
+                    'This does not predict the market. It simply checks whether the downside is survivable. If the potential loss would affect rent, loan payments, emergency savings, or mental comfort, the position is probably larger than the rest of the plan can support.',
+                ],
+            ],
+            [
+                'heading' => 'Review position size after large price moves',
+                'body' => [
+                    'Crypto positions can change size quickly because prices move sharply. A position that was reasonable at entry can become too large after a rally, or emotionally difficult after a decline. Regular review helps keep the allocation aligned with the original purpose.',
+                    'That review does not need to be constant. A monthly or quarterly check is enough for many people. The key is to compare the current position with your broader finances, not only with the price chart. If the allocation no longer fits, adjust deliberately instead of waiting for stress to force the decision.',
+                ],
+            ],
+            [
+                'heading' => 'Separate speculation from core planning',
+                'body' => [
+                    'Crypto may have a role in a personal plan, but it should not quietly replace the core pieces of financial stability. Rent, debt payments, emergency savings, insurance, and long-term diversified investing usually need clearer priority than speculative exposure. Position sizing helps keep those priorities visible.',
+                    'One useful test is to ask what would happen if the position fell sharply and stayed down for a long time. If the answer is frustration but no damage to essential plans, the size may be manageable. If the answer is missed payments, forced selling, or delayed necessities, the position is too large.',
+                    'This separation keeps crypto decisions more honest. You can still take a view on upside, but the position is sized so that the rest of your financial life does not depend on that view being correct.',
+                ],
+            ],
         ],
         'takeaways' => [
             'Size crypto positions in the context of your full financial life.',
@@ -691,6 +975,18 @@ return [
             [
                 'question' => 'Why think about downside first?',
                 'answer' => 'Because crypto volatility can be large. A position should be sized so a major drawdown does not break the rest of your financial plan.',
+            ],
+            [
+                'question' => 'How can I tell if my crypto position is too large?',
+                'answer' => 'It may be too large if a sharp decline would affect bills, emergency savings, debt payments, or your ability to sleep comfortably. Position size should be survivable, not only exciting.',
+            ],
+            [
+                'question' => 'Should fees affect position sizing?',
+                'answer' => 'Yes. Fees reduce the real result, especially for smaller or frequent trades. A careful position plan includes purchase fees, sale fees, and the actual execution price.',
+            ],
+            [
+                'question' => 'Should crypto profits change my allocation?',
+                'answer' => 'They can. If a position grows quickly, review whether it has become too large relative to cash, debt, and long-term investments. Rebalancing can protect the rest of the plan from one volatile asset.',
             ],
         ],
         'related_calculators' => ['crypto-profit-calculator', 'bitcoin-dca-calculator', 'budget-calculator'],
