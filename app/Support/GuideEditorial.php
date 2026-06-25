@@ -19,6 +19,15 @@ class GuideEditorial
             'salary-offer-net-pay' => ['published' => '2026-04-13', 'updated' => '2026-05-25'],
             'bitcoin-dca-discipline' => ['published' => '2026-04-15', 'updated' => '2026-05-25'],
             'crypto-position-sizing' => ['published' => '2026-04-17', 'updated' => '2026-05-25'],
+            'emi-affordability-before-borrowing' => ['published' => '2026-06-03', 'updated' => '2026-06-25'],
+            'sip-investment-mistakes' => ['published' => '2026-06-05', 'updated' => '2026-06-25'],
+            'personal-loan-prepayment-planning' => ['published' => '2026-06-07', 'updated' => '2026-06-25'],
+            'credit-card-interest-reduction' => ['published' => '2026-06-09', 'updated' => '2026-06-25'],
+            'monthly-expense-review-system' => ['published' => '2026-06-11', 'updated' => '2026-06-25'],
+            'fixed-deposit-vs-recurring-deposit' => ['published' => '2026-06-13', 'updated' => '2026-06-25'],
+            'retirement-contribution-planning' => ['published' => '2026-06-15', 'updated' => '2026-06-25'],
+            'salary-budget-after-raise' => ['published' => '2026-06-17', 'updated' => '2026-06-25'],
+            'gst-vs-vat-basic-difference' => ['published' => '2026-06-19', 'updated' => '2026-06-25'],
         ];
 
         $date = $dates[$page['slug']] ?? ['published' => '2026-04-01', 'updated' => '2026-05-25'];
@@ -71,7 +80,7 @@ class GuideEditorial
                     ['question' => 'Why does flexibility matter in a mortgage offer?', 'answer' => 'Prepayment rules, refinancing options, and fee structures can change the real value of the loan if your plans shift after purchase.'],
                 ]
             ),
-            'compounding-time-horizons', 'bitcoin-dca-discipline' => self::build(
+            'compounding-time-horizons', 'bitcoin-dca-discipline', 'sip-investment-mistakes', 'fixed-deposit-vs-recurring-deposit', 'retirement-contribution-planning' => self::build(
                 'Who this guide helps',
                 [
                     'This guide is useful for people who understand the basic idea of long-term investing but want a clearer sense of what time actually changes in the result. It helps turn an abstract concept into something easier to connect with a monthly contribution or target amount.',
@@ -104,7 +113,7 @@ class GuideEditorial
                     ['question' => 'Does this mean early returns do not matter?', 'answer' => 'No. Returns matter throughout, but the visible impact often becomes much larger after time has allowed the balance to grow.'],
                 ]
             ),
-            'monthly-budget-framework', 'take-home-pay-planning', 'salary-offer-net-pay', 'emergency-fund-planning' => self::build(
+            'monthly-budget-framework', 'take-home-pay-planning', 'salary-offer-net-pay', 'emergency-fund-planning', 'monthly-expense-review-system', 'salary-budget-after-raise' => self::build(
                 'Who this guide helps',
                 [
                     'This guide is most useful for people trying to make day-to-day money decisions feel less chaotic. That may include salaried workers, self-employed people, households managing shared bills, or anyone trying to align saving and spending with real monthly cash flow.',
@@ -137,7 +146,7 @@ class GuideEditorial
                     ['question' => 'What if my budget shows only a tiny margin?', 'answer' => 'That is still useful information. It means you can focus on the largest categories first and protect the essentials before adjusting smaller goals.'],
                 ]
             ),
-            'debt-payoff-strategy', 'crypto-position-sizing', 'choosing-loan-term', 'down-payment-vs-cash-reserves' => self::build(
+            'debt-payoff-strategy', 'crypto-position-sizing', 'choosing-loan-term', 'down-payment-vs-cash-reserves', 'emi-affordability-before-borrowing', 'personal-loan-prepayment-planning', 'credit-card-interest-reduction' => self::build(
                 'Who this guide helps',
                 [
                     'This guide is useful when the decision is not only mathematical but also emotional. Debt plans, loan terms, down payments, and crypto position sizes all carry pressure because they affect future flexibility as much as they affect the headline number.',
@@ -170,7 +179,7 @@ class GuideEditorial
                     ['question' => 'Is the lowest-cost option always the best choice?', 'answer' => 'Not always. A lower-cost option can still be weaker if it removes too much flexibility or creates more monthly strain than you can comfortably manage.'],
                 ]
             ),
-            'understanding-vat-inclusive-pricing' => self::build(
+            'understanding-vat-inclusive-pricing', 'gst-vs-vat-basic-difference' => self::build(
                 'Who this guide helps',
                 [
                     'This guide is useful for people checking invoices, pricing quotes, receipts, or transaction totals where tax is already included. It helps remove the confusion between gross totals, net values, and the actual tax portion inside the number.',

@@ -241,13 +241,13 @@ class CalculatorEditorial
     protected static function categoryGuideMap(): array
     {
         return [
-            'loan-calculators' => ['mortgage-offers', 'choosing-loan-term', 'down-payment-vs-cash-reserves'],
-            'investment-calculators' => ['compounding-time-horizons', 'emergency-fund-planning'],
-            'tax-calculators' => ['understanding-vat-inclusive-pricing', 'take-home-pay-planning'],
-            'salary-calculators' => ['take-home-pay-planning', 'salary-offer-net-pay'],
-            'credit-calculators' => ['debt-payoff-strategy'],
+            'loan-calculators' => ['emi-affordability-before-borrowing', 'personal-loan-prepayment-planning', 'mortgage-offers', 'choosing-loan-term', 'down-payment-vs-cash-reserves'],
+            'investment-calculators' => ['sip-investment-mistakes', 'retirement-contribution-planning', 'fixed-deposit-vs-recurring-deposit', 'compounding-time-horizons', 'emergency-fund-planning'],
+            'tax-calculators' => ['gst-vs-vat-basic-difference', 'understanding-vat-inclusive-pricing', 'take-home-pay-planning'],
+            'salary-calculators' => ['salary-budget-after-raise', 'take-home-pay-planning', 'salary-offer-net-pay'],
+            'credit-calculators' => ['credit-card-interest-reduction', 'personal-loan-prepayment-planning', 'debt-payoff-strategy'],
             'crypto-calculators' => ['bitcoin-dca-discipline', 'crypto-position-sizing'],
-            'budget-calculators' => ['monthly-budget-framework', 'emergency-fund-planning'],
+            'budget-calculators' => ['monthly-expense-review-system', 'monthly-budget-framework', 'salary-budget-after-raise', 'emergency-fund-planning'],
         ];
     }
 }

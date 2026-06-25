@@ -192,6 +192,8 @@ class SitePagesTest extends TestCase
 
     public function test_all_guides_have_substantial_article_content(): void
     {
+        $this->assertGreaterThanOrEqual(20, count(config('guides')), 'The guide library should keep at least 20 substantial articles before AdSense review.');
+
         foreach (config('guides') as $slug => $guide) {
             $text = ($guide['intro'] ?? '').' ';
 

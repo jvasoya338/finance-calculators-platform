@@ -22,7 +22,7 @@ class HomeController extends Controller
         $featuredEmiResult = $calculatorService->calculate('emi-calculator', $featuredEmiPayload);
         $featuredCalculators = CalculatorCatalog::featured();
         $guidePreviews = collect(config('guides'))
-            ->only(['monthly-budget-framework', 'compounding-time-horizons', 'debt-payoff-strategy'])
+            ->only(['emi-affordability-before-borrowing', 'sip-investment-mistakes', 'monthly-expense-review-system'])
             ->values();
 
         return view('pages.home', [
