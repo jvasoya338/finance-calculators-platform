@@ -111,6 +111,8 @@ class SitePagesTest extends TestCase
             ->assertOk()
             ->assertHeader('content-type', 'application/xml')
             ->assertSee(route('calculators.show', ['calculator' => 'emi-calculator']), false)
+            ->assertSee('<changefreq>weekly</changefreq>', false)
+            ->assertSee('<priority>1.0</priority>', false)
             ->assertDontSee(route('calculators.show', ['calculator' => 'currency-converter']), false);
     }
 
@@ -141,11 +143,16 @@ class SitePagesTest extends TestCase
 
         $this->get(route('regional.show', ['region' => 'us-finance-tools']))
             ->assertOk()
-            ->assertSee('US finance calculators and planning tools');
+            ->assertSee('US finance calculators and planning tools')
+            ->assertSee('U.S. mortgage and loan planning')
+            ->assertSee('hreflang="en-US"', false)
+            ->assertSee('hreflang="x-default"', false);
 
         $this->get(route('regional.show', ['region' => 'eu-finance-tools']))
             ->assertOk()
-            ->assertSee('EU finance calculators and money planning pages');
+            ->assertSee('EU finance calculators and money planning pages')
+            ->assertSee('VAT and tax-inclusive price checks')
+            ->assertSee('hreflang="en"', false);
 
         $this->get(route('disclaimer'))
             ->assertOk()

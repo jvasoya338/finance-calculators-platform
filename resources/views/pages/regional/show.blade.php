@@ -49,6 +49,24 @@
             </div>
         </section>
 
+        @if(!empty($page['seo_sections']))
+            <section class="mt-14">
+                <div>
+                    <p class="eyebrow">Country-focused planning</p>
+                    <h2 class="section-title mt-4">Finance topics this regional hub is built to support</h2>
+                </div>
+
+                <div class="mt-8 grid gap-5 lg:grid-cols-3">
+                    @foreach($page['seo_sections'] as $section)
+                        <article class="surface-panel p-6">
+                            <h3 class="font-display text-2xl font-semibold tracking-tight text-[#0B2A4A]">{{ $section['heading'] }}</h3>
+                            <p class="mt-4 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $section['body'] }}</p>
+                        </article>
+                    @endforeach
+                </div>
+            </section>
+        @endif
+
         <section class="mt-14">
             <div class="flex items-end justify-between gap-6">
                 <div>

@@ -1,58 +1,281 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# FinguruTools
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+FinguruTools is a Laravel-based finance calculator and education platform for everyday money decisions. It combines working calculators, country-aware defaults, regional finance hubs, long-form guides, SEO metadata, structured data, and trust pages so visitors can compare financial scenarios with clearer context.
 
-## About Laravel
+Live site: [https://fingurutools.com](https://fingurutools.com)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## What The Platform Includes
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- 29 finance calculators across loans, investments, salary, taxes, credit, crypto, budgeting, and currency conversion.
+- 21 long-form finance guides, each protected by tests requiring substantial article content.
+- Regional finance hubs for India, the United Kingdom, the United States, and Europe.
+- Country-aware currency and tax context with India as the default fallback.
+- SEO-ready page metadata, canonical URLs, Open Graph tags, Twitter cards, JSON-LD structured data, and XML sitemap.
+- Legal and trust pages including About, Contact, Privacy Policy, Terms, Disclaimer, Editorial Policy, and Calculation Methodology.
+- Production build assets committed for direct hosting environments.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Core Features
 
-## Learning Laravel
+### Calculator Library
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The calculator catalog lives in [config/calculators.php](config/calculators.php). Each calculator can define:
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- slug and route
+- title and SEO metadata
+- category
+- input fields
+- default values
+- result labels
+- related calculators
+- FAQ content
+- indexability rules
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+Main calculator categories include:
 
-## Agentic Development
+- Loan calculators
+- Investment calculators
+- Tax calculators
+- Salary calculators
+- Credit calculators
+- Crypto calculators
+- Budget calculators
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+### Finance Guides
+
+Finance guide content lives in [config/guides.php](config/guides.php). Guide pages include:
+
+- meta title and description
+- headline and introduction
+- structured article sections
+- takeaways
+- FAQs
+- related calculators
+- author and update metadata
+- Article and FAQ structured data
+
+The test suite checks that the guide library keeps at least 20 substantial articles and that every guide has at least 800 words of useful content.
+
+### Regional SEO Hubs
+
+Regional pages are configured in [config/finance.php](config/finance.php) under `regional_pages`.
+
+Current hubs:
+
+- `/india-finance-tools`
+- `/uk-finance-tools`
+- `/us-finance-tools`
+- `/eu-finance-tools`
+
+These pages include regional titles, descriptions, popular search themes, featured calculators, FAQs, country-focused content sections, and valid `hreflang` alternates such as `en-IN`, `en-GB`, `en-US`, broad `en`, and `x-default`.
+
+### SEO System
+
+SEO data is generated through [app/Support/SeoData.php](app/Support/SeoData.php). The system supports:
+
+- canonical URLs
+- robots directives
+- Open Graph metadata
+- Twitter card metadata
+- `hreflang` alternates
+- Website schema
+- Organization schema
+- Breadcrumb schema
+- CollectionPage schema
+- ItemList schema
+- Article schema
+- FAQ schema
+
+The XML sitemap is generated by [app/Http/Controllers/Web/SiteMapController.php](app/Http/Controllers/Web/SiteMapController.php) and rendered by [resources/views/pages/sitemap.blade.php](resources/views/pages/sitemap.blade.php). It includes stable `lastmod`, `changefreq`, and `priority` values for crawler clarity.
+
+## Tech Stack
+
+- PHP 8.3+
+- Laravel 13
+- Blade templates
+- Vite 8
+- Tailwind CSS 4
+- PHPUnit 12
+- MySQL in production-style configuration
+
+## Local Setup
+
+Clone the repository and install dependencies:
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install
+npm install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Create the environment file:
 
-## Contributing
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Configure database values in `.env`, then run migrations if your environment needs database tables:
 
-## Code of Conduct
+```bash
+php artisan migrate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Start the local app:
 
-## Security Vulnerabilities
+```bash
+composer run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+This runs the Laravel server, queue listener, log tailing, and Vite development server together.
+
+## Build For Production
+
+```bash
+npm run build
+```
+
+The production assets are generated into `public/build`.
+
+## Run Tests
+
+```bash
+php artisan test
+```
+
+The tests cover:
+
+- homepage rendering
+- calculator result pages
+- country detection and India fallback
+- canonical host redirect
+- robots.txt sitemap reference
+- category and sitemap availability
+- contact page rendering
+- custom 404 page
+- regional finance pages
+- guide pages and author/date trust signals
+- minimum guide count and guide word depth
+- noindex behavior for overlapping calculators
+- About page trust content
+- calculator service formulas
+- country tax service behavior
+
+## Important Routes
+
+```text
+/                         Home
+/calculators              Calculator index
+/{calculator}             Calculator detail page
+/category/{category}      Calculator category page
+/guides                   Guide index
+/guides/{guide}           Guide article page
+/india-finance-tools      India regional hub
+/uk-finance-tools         UK regional hub
+/us-finance-tools         US regional hub
+/eu-finance-tools         Europe regional hub
+/about                    About page
+/contact                  Contact page
+/privacy-policy           Privacy Policy
+/terms-and-conditions     Terms and Conditions
+/disclaimer               Finance disclaimer
+/editorial-policy         Editorial Policy
+/calculation-methodology  Calculation Methodology
+/robots.txt               Crawler rules
+/sitemap.xml              XML sitemap
+```
+
+## Project Structure
+
+```text
+app/Http/Controllers/Web/       Web page controllers
+app/Http/Middleware/            Canonical host and country context middleware
+app/Services/Calculators/       Calculator execution and finance formulas
+app/Support/                    Catalog, SEO, country, and editorial helpers
+config/calculators.php          Calculator definitions
+config/finance.php              Brand, categories, static pages, regional hubs
+config/guides.php               Long-form guide content
+resources/views/                Blade templates and page layouts
+resources/css/                  Tailwind app styles
+resources/js/                   Frontend behavior
+public/brand/                   Logo, favicon, social preview image
+public/build/                   Production Vite assets
+tests/Feature/                  Page and SEO feature tests
+tests/Unit/                     Calculator and tax unit tests
+```
+
+## SEO And AdSense Readiness Notes
+
+This project includes several quality signals important for public search and ad review:
+
+- substantial guide content instead of calculator-only pages
+- author and update metadata on guide pages
+- editorial and methodology pages for finance trust
+- custom 404 page
+- crawlable robots.txt
+- sitemap.xml with indexable URLs only
+- canonical domain redirect from `www` to the primary host
+- noindex rules for overlapping or lower-value utility pages
+- regional hubs for US, UK, EU, and India search intent
+- valid structured data for articles, FAQs, breadcrumbs, regional collections, and site identity
+
+After deployment, submit `https://fingurutools.com/sitemap.xml` in Google Search Console and request indexing for the homepage, calculator index, guide index, and regional hubs.
+
+## Deployment Checklist
+
+Before deploying:
+
+```bash
+php artisan test
+npm run build
+```
+
+Production environment reminders:
+
+- Set `APP_ENV=production`
+- Set `APP_DEBUG=false`
+- Set `APP_URL=https://fingurutools.com`
+- Configure database credentials
+- Configure mail settings if contact notifications should be sent
+- Ensure `public/build` is deployed with the app
+- Ensure `robots.txt` and `sitemap.xml` are publicly reachable
+- Clear and cache config/routes/views as appropriate for the hosting environment
+
+Useful Laravel production commands:
+
+```bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+```
+
+## Content Editing Guide
+
+To add a new calculator:
+
+1. Add the calculator definition in `config/calculators.php`.
+2. Add or reuse formula logic in `app/Services/Calculators`.
+3. Add related calculators and FAQs.
+4. Add feature or unit tests when behavior changes.
+5. Confirm whether the page should be indexable.
+
+To add a new guide:
+
+1. Add the guide in `config/guides.php`.
+2. Add metadata in `app/Support/GuideEditorial.php`.
+3. Connect it to relevant calculators or categories.
+4. Keep the guide substantial and useful.
+5. Run `php artisan test`.
+
+To improve a regional hub:
+
+1. Edit `regional_pages` in `config/finance.php`.
+2. Add useful search themes, FAQs, and regional content sections.
+3. Check `hreflang` values.
+4. Run the feature tests.
+
+## Security
+
+Do not commit secrets, production credentials, API keys, private email passwords, database dumps, or server-specific configuration. Use `.env` for environment-specific values.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is currently maintained by TJVerse Group for FinguruTools. Add or update a formal license file before reusing the code outside the intended project.

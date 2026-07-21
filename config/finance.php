@@ -163,6 +163,7 @@ return [
     'regional_pages' => [
         'india-finance-tools' => [
             'slug' => 'india-finance-tools',
+            'hreflang' => 'en-IN',
             'title' => 'India Finance Tools',
             'meta_title' => 'India Finance Calculators, EMI Tools & Salary Estimators | FinguruTools',
             'meta_description' => 'Explore India-focused finance calculators from FinguruTools for EMI, home loans, SIP, salary, tax, GST, budgeting, and long-term planning.',
@@ -198,6 +199,7 @@ return [
         ],
         'uk-finance-tools' => [
             'slug' => 'uk-finance-tools',
+            'hreflang' => 'en-GB',
             'title' => 'UK Finance Tools',
             'meta_title' => 'UK Finance Calculators, Salary Tools & Mortgage Estimators | FinguruTools',
             'meta_description' => 'Browse UK-focused finance tools from FinguruTools for mortgages, salary, tax, savings, debt payoff, and practical money planning.',
@@ -233,25 +235,44 @@ return [
         ],
         'us-finance-tools' => [
             'slug' => 'us-finance-tools',
+            'hreflang' => 'en-US',
             'title' => 'US Finance Tools',
-            'meta_title' => 'US Finance Calculators, Tax Tools & Salary Estimators | FinguruTools',
-            'meta_description' => 'Explore U.S. finance calculators from FinguruTools for loans, mortgages, taxes, salary, debt payoff, and financial planning.',
+            'meta_title' => 'US Finance Calculators: Mortgage, Tax, Salary & Debt Tools | FinguruTools',
+            'meta_description' => 'Use U.S.-focused finance calculators for mortgage payments, income tax estimates, take-home pay, credit card payoff, debt planning, and budgeting.',
             'headline' => 'US finance calculators and planning tools',
-            'intro' => 'This regional landing page is built for people searching for finance calculators relevant to the United States. It provides a clean hub for U.S.-oriented mortgage, loan, take-home pay, income tax, and debt planning tools.',
+            'intro' => 'This regional landing page is built for people searching for U.S. finance calculators around mortgage payments, income tax estimates, take-home pay, credit card payoff, personal loans, and household budgeting. It gives U.S. visitors a cleaner starting point before moving into a specific calculator or guide.',
             'body' => [
-                'This U.S. finance hub brings together calculators and guides for people comparing mortgages, loans, taxes, take-home pay, and debt payoff decisions.',
-                'It is especially useful when you want a simpler way to test affordability, estimate monthly cash flow, or compare repayment choices before using a lender or employer tool.',
+                'This U.S. finance hub brings together calculators and guides for people comparing mortgages, personal loans, credit card balances, income tax estimates, take-home pay, and monthly household budgets. The page is written for high-intent searches where a user wants to estimate a number quickly, then understand what that number means before making a larger decision.',
+                'For U.S. visitors, common planning questions often involve mortgage affordability, the difference between gross salary and take-home pay, credit card interest drag, loan repayment timelines, and how much room is left in the monthly budget after fixed costs. This hub connects those workflows instead of leaving every calculator isolated.',
+                'The calculators are educational planning tools. U.S. tax, payroll, mortgage, and lending rules can vary by state, employer, lender, filing status, and product terms, so important decisions should still be checked against official sources, lenders, employers, or qualified professionals.',
             ],
             'use_cases' => [
-                'Estimate mortgage, personal loan, and credit repayment scenarios with clearer monthly cost views.',
-                'Review salary, tax, and take-home planning before making work or relocation decisions.',
-                'Use a structured U.S. finance hub to compare borrowing, budgeting, and debt payoff options.',
+                'Estimate mortgage payments, personal loan EMIs, and total interest before comparing lender offers.',
+                'Review salary, income tax, and take-home pay estimates before budgeting from a job offer or relocation decision.',
+                'Compare credit card payoff, debt reduction, and monthly budget scenarios before choosing a repayment plan.',
+                'Move from a broad U.S. finance search into specific tools for borrowing, payroll, tax, savings, and household planning.',
             ],
             'popular_searches' => [
-                'mortgage calculator usa',
-                'income tax calculator us',
-                'take home pay calculator usa',
+                'mortgage calculator us',
+                'us income tax calculator',
+                'take home pay calculator us',
                 'credit card payoff calculator',
+                'personal loan calculator us',
+                'budget calculator us',
+            ],
+            'seo_sections' => [
+                [
+                    'heading' => 'U.S. mortgage and loan planning',
+                    'body' => 'Use the mortgage, personal loan, and loan calculators to compare payment size, repayment term, interest cost, and affordability before a lender conversation. This is useful for searches around U.S. mortgage payment estimates, personal loan payment planning, and monthly debt commitments.',
+                ],
+                [
+                    'heading' => 'U.S. salary, tax, and take-home pay planning',
+                    'body' => 'Use salary and income tax tools to translate gross pay into more practical monthly planning numbers. The estimates are not a substitute for official payroll calculations, but they help users understand how taxes and deductions affect everyday budgeting.',
+                ],
+                [
+                    'heading' => 'U.S. credit card and household budget decisions',
+                    'body' => 'Credit card interest, debt payoff, and budget calculators help users compare repayment speed, monthly pressure, and interest savings. This supports high-intent searches where the next step is usually a concrete payoff or spending plan.',
+                ],
             ],
             'faqs' => [
                 [
@@ -262,31 +283,54 @@ return [
                     'question' => 'What makes this U.S. hub useful?',
                     'answer' => 'It gathers several common U.S.-focused money decisions in one place, including mortgage planning, take-home pay, tax estimates, and debt payoff comparisons.',
                 ],
+                [
+                    'question' => 'Are these U.S. calculators official tax or lending tools?',
+                    'answer' => 'No. They are educational planning calculators. U.S. tax, payroll, mortgage, and lending outcomes can vary by state, employer, lender, filing status, and product terms.',
+                ],
             ],
             'related_categories' => ['loan-calculators', 'tax-calculators', 'salary-calculators', 'credit-calculators'],
             'featured_calculators' => ['mortgage-calculator', 'income-tax-calculator', 'take-home-salary-calculator', 'credit-card-interest-calculator'],
         ],
         'eu-finance-tools' => [
             'slug' => 'eu-finance-tools',
+            'hreflang' => 'en',
             'title' => 'EU Finance Tools',
-            'meta_title' => 'EU Finance Calculators, VAT Tools & Budget Planners | FinguruTools',
-            'meta_description' => 'Browse EU-focused finance tools from FinguruTools including VAT, salary, savings, mortgage, and budgeting calculators.',
+            'meta_title' => 'Europe Finance Calculators: VAT, Salary, Savings & Budget Tools | FinguruTools',
+            'meta_description' => 'Use Europe-focused finance calculators for VAT, salary estimates, savings, mortgages, budgeting, and cross-market money planning.',
             'headline' => 'EU finance calculators and money planning pages',
-            'intro' => 'This landing page supports finance-related searches across Europe with a clean internal hub for VAT, salary, budgeting, mortgage, savings, and broader financial planning tools.',
+            'intro' => 'This landing page supports finance-related searches across Europe with a clean internal hub for VAT, salary estimates, budgeting, mortgage planning, savings, and broader household money decisions. It is built for users who want a simple Europe-focused starting point before narrowing down to a specific country, calculator, or guide.',
             'body' => [
-                'This EU finance hub brings together VAT, salary, budgeting, savings, and borrowing tools in a format that is easier to compare across everyday planning decisions.',
-                'It is useful for people who want a broader Europe-focused starting point before narrowing down to a specific calculator or budget question.',
+                'This Europe finance hub brings together VAT, salary, budgeting, savings, mortgage, and borrowing tools in a format that is easier to compare across everyday planning decisions. It is especially useful for searches where the user wants the basic math first, then country-specific verification later.',
+                'Across Europe, finance questions often involve VAT-inclusive pricing, salary planning, household budgets, savings growth, loan affordability, and currency-aware comparisons. FinguruTools keeps these workflows connected so users can move from tax-inclusive price checks to budgets, savings goals, or loan decisions with less friction.',
+                'European tax, payroll, social contribution, VAT, and lending rules vary widely by country. This hub is therefore a broad educational planning page, not a claim that every EU member-state rule is fully modeled on one page.',
             ],
             'use_cases' => [
                 'Use VAT, salary, and savings tools in a cleaner cross-market planning environment.',
                 'Use one broad Europe-focused hub when you want to compare several types of money decisions without switching between disconnected tools.',
                 'Compare budgeting, borrowing, and long-term savings scenarios with less friction.',
+                'Check VAT-inclusive and VAT-exclusive prices before reviewing invoices, receipts, or quotes.',
             ],
             'popular_searches' => [
                 'vat calculator europe',
                 'salary calculator europe',
                 'budget planner europe',
                 'savings calculator eu',
+                'mortgage calculator europe',
+                'vat inclusive calculator',
+            ],
+            'seo_sections' => [
+                [
+                    'heading' => 'VAT and tax-inclusive price checks',
+                    'body' => 'Use VAT and sales tax tools to separate net price, tax amount, and final payable total. This supports common European searches around VAT-inclusive pricing, invoice review, and cross-border quote comparison.',
+                ],
+                [
+                    'heading' => 'European salary and household budget planning',
+                    'body' => 'Use salary, take-home pay, and budget calculators to build a clearer monthly money picture before reviewing country-specific payroll or social contribution details.',
+                ],
+                [
+                    'heading' => 'Savings, mortgage, and borrowing decisions',
+                    'body' => 'Use savings, mortgage, and loan calculators to compare monthly affordability, future value, and repayment pressure before moving into country-specific banking or lender rules.',
+                ],
             ],
             'faqs' => [
                 [
@@ -296,6 +340,10 @@ return [
                 [
                     'question' => 'Who is this EU page most useful for?',
                     'answer' => 'It is most useful for people who want a simple entry point for finance comparisons that often involve VAT, savings, salary, or household budgeting across European contexts.',
+                ],
+                [
+                    'question' => 'Does this EU hub cover every country rule?',
+                    'answer' => 'No. It provides broad Europe-focused planning tools. VAT, payroll, social contribution, and lending rules should be checked against country-specific official sources.',
                 ],
             ],
             'related_categories' => ['tax-calculators', 'salary-calculators', 'investment-calculators', 'budget-calculators'],

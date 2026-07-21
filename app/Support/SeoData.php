@@ -84,7 +84,7 @@ class SeoData
         $alternates = collect($regionalPages)
             ->map(function (array $alternate) {
                 return [
-                    'hreflang' => $alternate['slug'],
+                    'hreflang' => $alternate['hreflang'] ?? 'en',
                     'href' => route('regional.show', ['region' => $alternate['slug']]),
                 ];
             })
@@ -160,7 +160,27 @@ class SeoData
             '@type' => 'CollectionPage',
             'name' => $page['title'],
             'url' => route('regional.show', ['region' => $page['slug']]),
+            'inLanguage' => $page['hreflang'] ?? 'en',
             'description' => $page['meta_description'] ?? $page['intro'] ?? config('finance.brand.description'),
+            'isPartOf' => [
+                '@type' => 'WebSite',
+                'name' => config('finance.brand.name'),
+                'url' => url('/'),
+            ],
+            'publisher' => [
+                '@type' => 'Organization',
+                'name' => config('finance.brand.company', config('finance.brand.name')),
+                'url' => config('finance.brand.website', url('/')),
+            ],
+            'audience' => [
+                '@type' => 'Audience',
+                'audienceType' => $page['title'].' visitors',
+            ],
+            'about' => collect($page['popular_searches'] ?? [])
+                ->take(6)
+                ->map(fn (string $topic) => ['@type' => 'Thing', 'name' => $topic])
+                ->values()
+                ->all(),
         ];
     }
 
