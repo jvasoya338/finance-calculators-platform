@@ -17,6 +17,9 @@ class SitePagesTest extends TestCase
         $response->assertSee('EMI Calculator');
         $response->assertSee('Monthly EMI');
         $response->assertSee('Practical reading before bigger money decisions');
+        $response->assertSee('Finance calculators for U.S., Europe, UK, and India search intent');
+        $response->assertSee('U.S. finance calculators');
+        $response->assertSee('Europe finance calculators');
         $response->assertSee('Planning updates');
         $response->assertSee('Search all calculators');
         $response->assertSee('Open contact form');
@@ -55,6 +58,10 @@ class SitePagesTest extends TestCase
         $response->assertOk();
         $response->assertSee('Results');
         $response->assertSee('Monthly payment');
+        $response->assertSee('Searches this calculator is built to support');
+        $response->assertSee('loan calculator us');
+        $response->assertSee('WebApplication');
+        $response->assertSee('meta name="keywords"', false);
     }
 
     public function test_geo_country_header_detects_india(): void
@@ -101,11 +108,19 @@ class SitePagesTest extends TestCase
     {
         $this->get(route('categories.show', ['category' => 'investment-calculators']))
             ->assertOk()
-            ->assertSee('Investment calculators');
+            ->assertSee('Investment calculators')
+            ->assertSee('Popular U.S., Europe, and global searches this category supports')
+            ->assertSee('retirement calculator us');
 
         $this->get(route('categories.show', ['category' => 'crypto-calculators']))
             ->assertOk()
             ->assertSee('Crypto calculators');
+
+        $this->get(route('calculators.index'))
+            ->assertOk()
+            ->assertSee('Popular calculator searches for the U.S., Europe, UK, and India')
+            ->assertSee('mortgage calculator us')
+            ->assertSee('VAT calculator');
 
         $this->get(route('sitemap'))
             ->assertOk()

@@ -25,6 +25,19 @@
             @endforeach
         </div>
 
+        <section class="mt-12 surface-panel p-6 sm:p-8">
+            <p class="eyebrow">Search themes</p>
+            <h2 class="section-title mt-4">Popular U.S., Europe, and global searches this category supports</h2>
+            <div class="mt-6 flex flex-wrap gap-3">
+                @foreach($editorial['search_themes'] as $theme)
+                    <span class="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white px-4 py-2 text-sm font-semibold text-[#0B2A4A] shadow-[0_10px_24px_rgba(11,42,74,0.04)]">{{ $theme }}</span>
+                @endforeach
+            </div>
+            <p class="mt-6 max-w-3xl text-sm leading-7 text-[rgba(11,42,74,0.72)]">
+                These themes help visitors move from a broad country or region search into a specific calculator, guide, or planning page without losing the context behind the number.
+            </p>
+        </section>
+
         @if($editorial['guide_links']->isNotEmpty())
             <section class="mt-12 surface-panel p-6 sm:p-8">
                 <p class="eyebrow">Related guides</p>

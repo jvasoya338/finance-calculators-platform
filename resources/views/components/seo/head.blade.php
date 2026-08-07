@@ -9,6 +9,9 @@
 
 <title>{{ $title }}</title>
 <meta name="description" content="{{ $description }}">
+@if(!empty($seo['keywords']))
+    <meta name="keywords" content="{{ implode(', ', array_slice($seo['keywords'], 0, 12)) }}">
+@endif
 <meta name="robots" content="{{ $seo['robots'] ?? 'index,follow' }}">
 <link rel="canonical" href="{{ $canonical }}">
 @foreach(($seo['alternates'] ?? []) as $alternate)

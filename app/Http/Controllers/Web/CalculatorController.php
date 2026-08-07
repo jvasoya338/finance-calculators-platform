@@ -18,8 +18,9 @@ class CalculatorController extends Controller
     {
         return view('pages.calculators.index', [
             'seo' => SeoData::base([
-                'title' => 'All Finance Calculators | FinguruTools',
-                'description' => 'Browse all loan, mortgage, investment, tax, salary, credit, and budgeting calculators on FinguruTools.',
+                'title' => 'All Finance Calculators for US, Europe, UK & India | FinguruTools',
+                'description' => 'Browse mortgage, VAT, salary, income tax, EMI, loan, investment, credit card, debt payoff, and budget calculators for U.S., Europe, UK, India, and global planning.',
+                'keywords' => ['finance calculators', 'mortgage calculator us', 'vat calculator europe', 'salary calculator uk', 'emi calculator india', 'debt payoff calculator'],
                 'canonical' => route('calculators.index'),
                 'json_ld' => [SeoData::websiteSchema()],
             ]),

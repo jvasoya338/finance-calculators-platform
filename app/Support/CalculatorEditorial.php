@@ -19,6 +19,7 @@ class CalculatorEditorial
             'input_highlights' => self::inputHighlights($calculator, $fieldLabels),
             'interpretation' => self::interpretation($calculator),
             'tips' => self::tips($calculator),
+            'search_intent' => self::calculatorSearchIntent($calculator),
             'related_guides' => self::relatedGuides($calculator),
         ];
     }
@@ -32,8 +33,108 @@ class CalculatorEditorial
 
         return [
             'planning_points' => self::categoryPlanningPoints($category),
+            'search_themes' => self::categorySearchThemes($category),
             'guide_links' => $guides,
         ];
+    }
+
+    public static function seoProfileForCalculator(array $calculator): array
+    {
+        $title = $calculator['title'];
+
+        return match ($calculator['type']) {
+            'mortgage' => [
+                'title' => "{$title}: US & Europe Monthly Payment Estimate",
+                'description' => "Use this {$title} to estimate monthly mortgage payments, total interest, and repayment cost for U.S., UK, European, and international home-loan planning.",
+                'keywords' => ['mortgage calculator us', 'mortgage calculator europe', 'monthly mortgage payment calculator', 'home loan interest calculator'],
+            ],
+            'amortized_loan' => [
+                'title' => "{$title}: Loan Payment Calculator for US & Europe",
+                'description' => "Estimate monthly loan payments, total interest, and repayment cost for U.S., European, UK, India, and global fixed-rate borrowing scenarios.",
+                'keywords' => ['loan payment calculator', 'loan calculator us', 'loan calculator europe', 'monthly payment calculator'],
+            ],
+            'income_tax' => [
+                'title' => 'Income Tax Calculator: US, UK, India & Generic Tax Estimate',
+                'description' => 'Estimate annual income tax, net income, and effective tax rate with U.S., UK, India, and generic international tax-model options.',
+                'keywords' => ['income tax calculator us', 'tax calculator uk', 'net income calculator', 'annual tax estimate'],
+            ],
+            'salary', 'take_home_salary', 'hourly_wage' => [
+                'title' => "{$title}: US, UK & Europe Pay Planning Tool",
+                'description' => "Use this {$title} to compare salary, hourly pay, take-home pay, and payroll planning assumptions for U.S., UK, European, and global users.",
+                'keywords' => ['salary calculator us', 'salary calculator europe', 'take home pay calculator', 'hourly wage calculator'],
+            ],
+            'sales_tax' => [
+                'title' => "{$title}: VAT, GST & Sales Tax Calculator",
+                'description' => "Calculate VAT, GST, sales tax, net price, gross price, and tax-inclusive totals for Europe, India, the U.S., and global pricing checks.",
+                'keywords' => ['vat calculator europe', 'gst calculator', 'sales tax calculator us', 'tax inclusive calculator'],
+            ],
+            'credit_card_interest', 'debt_payoff', 'loan_eligibility' => [
+                'title' => "{$title}: Debt, Credit & Borrowing Planner",
+                'description' => "Use this {$title} to compare payoff time, interest cost, borrowing capacity, and monthly debt pressure for U.S., European, UK, and global planning.",
+                'keywords' => ['credit card payoff calculator', 'debt payoff calculator', 'loan eligibility calculator', 'debt calculator us'],
+            ],
+            'sip', 'investment', 'compound_interest', 'retirement', 'fixed_deposit', 'recurring_deposit' => [
+                'title' => "{$title}: Savings & Investment Projection Tool",
+                'description' => "Estimate savings growth, investment value, compounding, retirement savings, or deposit maturity for U.S., European, India, and global planning scenarios.",
+                'keywords' => ['investment calculator', 'compound interest calculator', 'retirement calculator us', 'savings calculator europe'],
+            ],
+            'budget', 'expense' => [
+                'title' => "{$title}: Monthly Budget Planner for US & Europe",
+                'description' => "Build a monthly budget, compare expenses, and estimate savings rate for U.S., European, UK, India, and worldwide household planning.",
+                'keywords' => ['budget calculator us', 'budget planner europe', 'monthly expense calculator', 'savings rate calculator'],
+            ],
+            'currency_converter' => [
+                'title' => 'Currency Converter: Manual Exchange Rate Calculator',
+                'description' => 'Convert currencies with a manual exchange rate for travel, invoices, international shopping, transfers, and cross-border planning.',
+                'keywords' => ['currency converter', 'exchange rate calculator', 'manual currency converter', 'international money calculator'],
+            ],
+            default => [
+                'title' => $calculator['meta_title'],
+                'description' => $calculator['meta_description'],
+                'keywords' => [$title, Str::lower($title), 'finance calculator'],
+            ],
+        };
+    }
+
+    public static function seoProfileForCategory(array $category): array
+    {
+        return match ($category['slug']) {
+            'loan-calculators' => [
+                'title' => 'Loan Calculators for US, UK & Europe | FinguruTools',
+                'description' => 'Compare mortgage, EMI, personal loan, car loan, and monthly payment calculators for U.S., UK, European, India, and global borrowing decisions.',
+                'keywords' => ['loan calculators', 'mortgage calculator us', 'loan calculator europe', 'monthly payment calculator'],
+            ],
+            'investment-calculators' => [
+                'title' => 'Investment Calculators for Savings, SIP & Retirement | FinguruTools',
+                'description' => 'Use investment calculators for compound interest, SIP, retirement, savings, FD, and RD projections across U.S., European, India, and global planning.',
+                'keywords' => ['investment calculators', 'compound interest calculator', 'retirement calculator us', 'savings calculator europe'],
+            ],
+            'tax-calculators' => [
+                'title' => 'Tax Calculators for VAT, GST, Sales Tax & Income Tax | FinguruTools',
+                'description' => 'Estimate VAT, GST, sales tax, income tax, net price, gross price, and tax-inclusive totals for Europe, the U.S., India, and global planning.',
+                'keywords' => ['tax calculators', 'vat calculator europe', 'income tax calculator us', 'gst calculator'],
+            ],
+            'salary-calculators' => [
+                'title' => 'Salary Calculators for US, UK & Europe Pay Planning | FinguruTools',
+                'description' => 'Estimate salary, hourly wage, take-home pay, net income, and payroll planning numbers for U.S., UK, European, India, and global users.',
+                'keywords' => ['salary calculator us', 'salary calculator uk', 'salary calculator europe', 'take home pay calculator'],
+            ],
+            'credit-calculators' => [
+                'title' => 'Credit & Debt Calculators for Payoff Planning | FinguruTools',
+                'description' => 'Compare credit card interest, debt payoff, loan eligibility, borrowing capacity, and repayment scenarios for U.S., European, UK, and global users.',
+                'keywords' => ['credit card payoff calculator', 'debt payoff calculator', 'loan eligibility calculator', 'debt calculator'],
+            ],
+            'budget-calculators' => [
+                'title' => 'Budget Calculators for Monthly Expenses & Savings | FinguruTools',
+                'description' => 'Use budget and expense calculators to plan monthly spending, savings rate, and household cash flow for U.S., Europe, UK, India, and global users.',
+                'keywords' => ['budget calculator us', 'budget planner europe', 'monthly expense calculator', 'household budget calculator'],
+            ],
+            default => [
+                'title' => $category['name'].' | FinguruTools',
+                'description' => $category['description'],
+                'keywords' => [$category['name'], 'finance calculators'],
+            ],
+        };
     }
 
     protected static function overview(array $calculator): array
@@ -195,6 +296,43 @@ class CalculatorEditorial
             ->filter()
             ->take(2)
             ->values();
+    }
+
+    protected static function calculatorSearchIntent(array $calculator): array
+    {
+        $profile = self::seoProfileForCalculator($calculator);
+
+        $body = match ($calculator['type']) {
+            'mortgage' => 'Useful for U.S. mortgage payment searches, UK mortgage comparisons, European home-loan planning, and any user who wants to compare monthly payment with total interest before speaking with a lender.',
+            'amortized_loan' => 'Useful for U.S. loan payment searches, European loan affordability checks, UK repayment planning, India EMI comparisons, and global fixed-rate borrowing estimates.',
+            'income_tax' => 'Useful for U.S. income tax estimates, UK tax planning, India tax comparisons, and generic international net-income checks before reviewing official tax rules.',
+            'salary', 'take_home_salary', 'hourly_wage' => 'Useful for U.S. salary calculator searches, UK take-home pay planning, Europe salary comparisons, remote-work pay checks, and monthly budget decisions.',
+            'sales_tax' => 'Useful for Europe VAT calculator searches, U.S. sales tax checks, India GST calculations, invoice review, receipt breakdowns, and tax-inclusive price comparisons.',
+            'credit_card_interest', 'debt_payoff', 'loan_eligibility' => 'Useful for U.S. credit card payoff searches, European debt planning, UK repayment comparisons, loan eligibility checks, and monthly debt-pressure reviews.',
+            'sip', 'investment', 'compound_interest', 'retirement', 'fixed_deposit', 'recurring_deposit' => 'Useful for U.S. retirement planning, Europe savings projections, India SIP and deposit comparisons, compound interest estimates, and long-term investment scenarios.',
+            'budget', 'expense' => 'Useful for U.S. budget calculator searches, Europe household expense planning, UK monthly budget checks, India savings-rate planning, and global cash-flow reviews.',
+            default => 'Useful for users comparing finance scenarios across the U.S., Europe, the UK, India, and other markets where clear assumptions matter.',
+        };
+
+        return [
+            'heading' => 'Searches this calculator is built to support',
+            'body' => $body,
+            'keywords' => $profile['keywords'],
+        ];
+    }
+
+    protected static function categorySearchThemes(array $category): array
+    {
+        return match ($category['slug']) {
+            'loan-calculators' => ['mortgage calculator us', 'loan calculator europe', 'monthly payment calculator', 'emi calculator india'],
+            'investment-calculators' => ['compound interest calculator', 'retirement calculator us', 'savings calculator europe', 'sip calculator india'],
+            'tax-calculators' => ['vat calculator europe', 'income tax calculator us', 'gst calculator online', 'tax inclusive calculator'],
+            'salary-calculators' => ['salary calculator us', 'take home pay calculator uk', 'salary calculator europe', 'hourly wage calculator'],
+            'credit-calculators' => ['credit card payoff calculator', 'debt payoff calculator', 'loan eligibility calculator', 'borrowing capacity calculator'],
+            'crypto-calculators' => ['bitcoin dca calculator', 'crypto profit calculator', 'bitcoin investment calculator', 'crypto roi calculator'],
+            'budget-calculators' => ['budget calculator us', 'budget planner europe', 'monthly expense calculator', 'savings rate calculator'],
+            default => ['finance calculator', 'money planning calculator', 'personal finance tools'],
+        };
     }
 
     protected static function categoryPlanningPoints(array $category): array

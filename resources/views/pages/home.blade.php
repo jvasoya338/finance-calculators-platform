@@ -108,6 +108,38 @@
     </section>
 
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div>
+            <p class="eyebrow">Regional finance hubs</p>
+            <h2 class="section-title mt-4">Finance calculators for U.S., Europe, UK, and India search intent</h2>
+            <p class="section-copy mt-4">
+                FinguruTools connects global calculators with regional finance pages so visitors can start from a country-focused search and move into the right mortgage, tax, salary, VAT, EMI, investment, credit, or budget tool.
+            </p>
+        </div>
+        <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <a href="{{ route('regional.show', ['region' => 'us-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
+                <p class="eyebrow">United States</p>
+                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">U.S. finance calculators</h3>
+                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">Mortgage payments, income tax estimates, take-home pay, credit card payoff, debt reduction, and monthly budget planning.</p>
+            </a>
+            <a href="{{ route('regional.show', ['region' => 'eu-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
+                <p class="eyebrow">Europe</p>
+                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">Europe finance calculators</h3>
+                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">VAT-inclusive pricing, salary estimates, savings growth, mortgage planning, budgeting, and cross-market money decisions.</p>
+            </a>
+            <a href="{{ route('regional.show', ['region' => 'uk-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
+                <p class="eyebrow">United Kingdom</p>
+                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">UK finance calculators</h3>
+                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">UK mortgage, salary, take-home pay, savings, household budget, and debt payoff planning workflows.</p>
+            </a>
+            <a href="{{ route('regional.show', ['region' => 'india-finance-tools']) }}" class="surface-panel p-6 transition hover:border-[rgba(31,78,140,0.45)]">
+                <p class="eyebrow">India</p>
+                <h3 class="mt-3 text-2xl font-semibold text-[#0B2A4A]">India finance calculators</h3>
+                <p class="mt-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">EMI, SIP, GST, salary, FD, RD, loan affordability, and day-to-day budget calculators with India-first defaults.</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div class="flex items-end justify-between gap-6">
             <div>
                 <p class="eyebrow">Categories</p>

@@ -129,6 +129,17 @@
                     </ul>
                 </section>
 
+                <section class="surface-panel p-6 sm:p-8">
+                    <p class="eyebrow">Search intent</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">{{ $editorial['search_intent']['heading'] }}</h2>
+                    <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">{{ $editorial['search_intent']['body'] }}</p>
+                    <div class="mt-6 flex flex-wrap gap-3">
+                        @foreach($editorial['search_intent']['keywords'] as $keyword)
+                            <span class="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white px-4 py-2 text-sm font-semibold text-[#0B2A4A] shadow-[0_10px_24px_rgba(11,42,74,0.04)]">{{ $keyword }}</span>
+                        @endforeach
+                    </div>
+                </section>
+
                 @if($editorial['related_guides']->isNotEmpty())
                     <section class="surface-panel p-6 sm:p-8">
                         <p class="eyebrow">Related reading</p>

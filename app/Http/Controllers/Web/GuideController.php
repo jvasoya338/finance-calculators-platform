@@ -15,7 +15,8 @@ class GuideController extends Controller
         return view('pages.guides.index', [
             'seo' => SeoData::base([
                 'title' => 'Finance Guides, US Finance Pages & EU Money Planning | FinguruTools',
-                'description' => 'Explore finance guides and regional hubs from FinguruTools covering loans, budgeting, investing, salary planning, and practical money decisions.',
+                'description' => 'Read finance guides for U.S. mortgage and debt planning, Europe VAT and salary topics, India EMI and SIP decisions, budgeting, investing, and tax estimates.',
+                'keywords' => ['finance guides', 'us finance guides', 'europe money planning', 'mortgage guide', 'vat guide', 'salary planning'],
                 'canonical' => route('guides.index'),
             ]),
             'breadcrumbs' => [
@@ -50,6 +51,11 @@ class GuideController extends Controller
             'seo' => SeoData::base([
                 'title' => $page['meta_title'],
                 'description' => $page['meta_description'],
+                'keywords' => collect($page['related_calculators'] ?? [])
+                    ->map(fn (string $slug) => str_replace('-', ' ', $slug))
+                    ->merge([$page['title'], 'finance guide', 'money planning'])
+                    ->values()
+                    ->all(),
                 'canonical' => route('guides.show', ['guide' => $guide]),
                 'json_ld' => [
                     SeoData::websiteSchema(),
