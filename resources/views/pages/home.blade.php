@@ -110,9 +110,9 @@
     <section class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div>
             <p class="eyebrow">Regional finance hubs</p>
-            <h2 class="section-title mt-4">Finance calculators for U.S., Europe, UK, and India search intent</h2>
+            <h2 class="section-title mt-4">Dedicated regional finance hubs for the U.S., Europe, UK, and India</h2>
             <p class="section-copy mt-4">
-                FinguruTools connects global calculators with regional finance pages so visitors can start from a country-focused search and move into the right mortgage, tax, salary, VAT, EMI, investment, credit, or budget tool.
+                Explore localized financial calculation hubs calibrated to the tax systems, banking standards, and borrowing conventions of your region.
             </p>
         </div>
         <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-4">

@@ -14,16 +14,16 @@
 
                 <div class="mt-8 grid gap-4 sm:grid-cols-3">
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
-                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Formula type</p>
-                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">Reusable service</p>
+                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Calculation Model</p>
+                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">{{ $editorial['specs']['model'] ?? 'Standard Formula' }}</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
-                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Metadata</p>
-                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">Explained clearly</p>
+                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Output Mode</p>
+                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">{{ $editorial['specs']['output'] ?? 'Real-Time Estimate' }}</p>
                     </div>
                     <div class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-white p-5 shadow-[0_16px_36px_rgba(11,42,74,0.05)]">
-                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Audience</p>
-                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">Worldwide</p>
+                        <p class="text-sm text-[rgba(11,42,74,0.56)]">Currency & Region</p>
+                        <p class="mt-2 text-lg font-semibold text-[#0B2A4A]">{{ $editorial['specs']['scope'] ?? 'Multi-Currency Global' }}</p>
                     </div>
                 </div>
             </div>
@@ -130,14 +130,20 @@
                 </section>
 
                 <section class="surface-panel p-6 sm:p-8">
-                    <p class="eyebrow">Search intent</p>
-                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">{{ $editorial['search_intent']['heading'] }}</h2>
-                    <p class="mt-5 text-base leading-8 text-[rgba(11,42,74,0.72)]">{{ $editorial['search_intent']['body'] }}</p>
-                    <div class="mt-6 flex flex-wrap gap-3">
-                        @foreach($editorial['search_intent']['keywords'] as $keyword)
-                            <span class="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white px-4 py-2 text-sm font-semibold text-[#0B2A4A] shadow-[0_10px_24px_rgba(11,42,74,0.04)]">{{ $keyword }}</span>
+                    <p class="eyebrow">Practical considerations</p>
+                    <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">{{ $editorial['considerations']['heading'] }}</h2>
+                    <div class="mt-5 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                        @foreach($editorial['considerations']['paragraphs'] as $paragraph)
+                            <p>{{ $paragraph }}</p>
                         @endforeach
                     </div>
+                    @if(!empty($editorial['considerations']['key_factors']))
+                        <ul class="mt-6 space-y-3 text-sm leading-7 text-[rgba(11,42,74,0.72)]">
+                            @foreach($editorial['considerations']['key_factors'] as $factor)
+                                <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4 font-medium text-[#0B2A4A]">{{ $factor }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </section>
 
                 @if($editorial['related_guides']->isNotEmpty())

@@ -17,7 +17,7 @@ class SitePagesTest extends TestCase
         $response->assertSee('EMI Calculator');
         $response->assertSee('Monthly EMI');
         $response->assertSee('Practical reading before bigger money decisions');
-        $response->assertSee('Finance calculators for U.S., Europe, UK, and India search intent');
+        $response->assertSee('Dedicated regional finance hubs for the U.S., Europe, UK, and India');
         $response->assertSee('U.S. finance calculators');
         $response->assertSee('Europe finance calculators');
         $response->assertSee('Planning updates');
@@ -58,8 +58,9 @@ class SitePagesTest extends TestCase
         $response->assertOk();
         $response->assertSee('Results');
         $response->assertSee('Monthly payment');
-        $response->assertSee('Searches this calculator is built to support');
-        $response->assertSee('loan calculator us');
+        $response->assertSee('Practical considerations');
+        $response->assertSee('Important Borrowing Caveats & Assumptions');
+        $response->assertSee('Calculation Model');
         $response->assertSee('WebApplication');
         $response->assertSee('meta name="keywords"', false);
     }
@@ -109,8 +110,7 @@ class SitePagesTest extends TestCase
         $this->get(route('categories.show', ['category' => 'investment-calculators']))
             ->assertOk()
             ->assertSee('Investment calculators')
-            ->assertSee('Popular U.S., Europe, and global searches this category supports')
-            ->assertSee('retirement calculator us');
+            ->assertSee('Core decision framework for investment calculators');
 
         $this->get(route('categories.show', ['category' => 'crypto-calculators']))
             ->assertOk()
@@ -118,8 +118,7 @@ class SitePagesTest extends TestCase
 
         $this->get(route('calculators.index'))
             ->assertOk()
-            ->assertSee('Popular calculator searches for the U.S., Europe, UK, and India')
-            ->assertSee('mortgage calculator us')
+            ->assertSee('Dedicated financial planning hubs for the U.S., Europe, UK, and India')
             ->assertSee('VAT calculator');
 
         $this->get(route('sitemap'))
@@ -150,23 +149,25 @@ class SitePagesTest extends TestCase
     {
         $this->get(route('regional.show', ['region' => 'india-finance-tools']))
             ->assertOk()
-            ->assertSee('India finance calculators and money planning tools');
+            ->assertSee('India Financial Planning & Calculator Hub')
+            ->assertSee('Equated Monthly Installment (EMI) Planning');
 
         $this->get(route('regional.show', ['region' => 'uk-finance-tools']))
             ->assertOk()
-            ->assertSee('UK finance calculators and planning pages');
+            ->assertSee('UK Financial Calculators & Decision Support')
+            ->assertSee('UK Mortgage & Property Financing');
 
         $this->get(route('regional.show', ['region' => 'us-finance-tools']))
             ->assertOk()
-            ->assertSee('US finance calculators and planning tools')
-            ->assertSee('U.S. mortgage and loan planning')
+            ->assertSee('US Financial Calculators & Money Planning Hub')
+            ->assertSee('Conventional Mortgage & Home Loan Planning')
             ->assertSee('hreflang="en-US"', false)
             ->assertSee('hreflang="x-default"', false);
 
         $this->get(route('regional.show', ['region' => 'eu-finance-tools']))
             ->assertOk()
-            ->assertSee('EU finance calculators and money planning pages')
-            ->assertSee('VAT and tax-inclusive price checks')
+            ->assertSee('European Financial Planning & Decision Hub')
+            ->assertSee('VAT Accounting & Price Breakdown')
             ->assertSee('hreflang="en"', false);
 
         $this->get(route('disclaimer'))
@@ -191,12 +192,11 @@ class SitePagesTest extends TestCase
         $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
             ->assertOk()
             ->assertSee('How to compare mortgage offers without focusing on rate alone')
-            ->assertSee('By FinguruTools Finance Content Team')
+            ->assertSee('By FinguruTools Editorial Research Team')
             ->assertSee('Published March 28, 2026')
-            ->assertSee('Updated May 25, 2026')
             ->assertSee('Article')
-            ->assertSee('How we approach this topic')
-            ->assertSee('Before you act on the result');
+            ->assertSee('Editorial Standards & Accuracy Protocol')
+            ->assertSee('Pre-Decision Verification Checklist');
 
         $this->get(route('guides.show', ['guide' => 'choosing-loan-term']))
             ->assertOk()

@@ -41,8 +41,8 @@
         </div>
 
         <section class="mt-12 surface-panel p-6 sm:p-8">
-            <p class="eyebrow">Regional search paths</p>
-            <h2 class="section-title mt-4">Popular calculator searches for the U.S., Europe, UK, and India</h2>
+            <p class="eyebrow">Regional planning hubs</p>
+            <h2 class="section-title mt-4">Dedicated financial planning hubs for the U.S., Europe, UK, and India</h2>
             <div class="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 <a href="{{ route('regional.show', ['region' => 'us-finance-tools']) }}" class="rounded-3xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] p-5 transition hover:border-[rgba(31,78,140,0.35)]">
                     <h3 class="text-lg font-semibold text-[#0B2A4A]">U.S. finance calculators</h3>

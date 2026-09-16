@@ -38,14 +38,13 @@
             </div>
 
             <div class="surface-panel p-6 sm:p-8">
-                <p class="eyebrow">Popular search themes</p>
-                <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">High-intent finance searches this hub can support</h2>
-                <div class="mt-6 flex flex-wrap gap-3">
-                    @foreach($page['popular_searches'] ?? [] as $search)
-                        <span class="inline-flex rounded-full border border-[rgba(31,78,140,0.14)] bg-white px-4 py-2 text-sm font-medium text-[#0B2A4A] shadow-[0_10px_24px_rgba(11,42,74,0.04)]">{{ $search }}</span>
+                <p class="eyebrow">Local financial norms</p>
+                <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Key financial practices & standards</h2>
+                <ul class="mt-6 space-y-4 text-base leading-8 text-[rgba(11,42,74,0.72)]">
+                    @foreach($page['regional_guidelines'] ?? ($page['popular_searches'] ?? []) as $guideline)
+                        <li class="rounded-2xl border border-[rgba(31,78,140,0.1)] bg-[rgba(31,78,140,0.03)] px-5 py-4 font-medium text-[#0B2A4A]">{{ $guideline }}</li>
                     @endforeach
-                </div>
-                <p class="mt-6 text-sm leading-7 text-[rgba(11,42,74,0.72)]">These examples reflect the kinds of questions people often bring to this regional hub before comparing calculators, budgets, or salary decisions.</p>
+                </ul>
             </div>
         </section>
 
