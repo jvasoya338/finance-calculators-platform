@@ -1,24 +1,26 @@
 @props(['schedule'])
 
 @if(!empty($schedule['rows']))
-    <section class="surface-panel p-6 sm:p-8">
-        <p class="eyebrow">Amortization table</p>
-        <h2 class="mt-4 font-display text-3xl font-semibold tracking-tight text-[#0B2A4A]">Payment schedule snapshot</h2>
-        <p class="mt-4 text-sm leading-7 text-[rgba(11,42,74,0.72)]">{{ $schedule['summary'] ?? '' }}</p>
-        <div class="mt-6 overflow-x-auto">
-            <table class="min-w-full text-left text-sm text-[rgba(11,42,74,0.78)]">
-                <thead>
-                    <tr class="border-b border-[rgba(31,78,140,0.12)] text-[rgba(11,42,74,0.56)]">
+    <section class="rounded-xl border border-slate-200 bg-white p-6 shadow-xs sm:p-7">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-500">Amortization Table</p>
+        <h3 class="mt-1 font-display text-lg font-bold text-slate-900">Payment Schedule Snapshot</h3>
+        @if(!empty($schedule['summary']))
+            <p class="mt-2 text-xs leading-relaxed text-slate-600">{{ $schedule['summary'] }}</p>
+        @endif
+        <div class="mt-4 overflow-x-auto rounded-lg border border-slate-200">
+            <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+                <thead class="bg-slate-50 text-slate-700">
+                    <tr>
                         @foreach($schedule['columns'] as $column)
-                            <th class="px-4 py-3 font-semibold">{{ $column }}</th>
+                            <th scope="col" class="px-3.5 py-2.5 font-semibold">{{ $column }}</th>
                         @endforeach
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="divide-y divide-slate-100 bg-white">
                     @foreach($schedule['rows'] as $row)
-                        <tr class="border-b border-[rgba(31,78,140,0.08)]">
+                        <tr class="hover:bg-slate-50/80 transition-colors">
                             @foreach($row as $cell)
-                                <td class="px-4 py-3">{{ $cell }}</td>
+                                <td class="whitespace-nowrap px-3.5 py-2.5 text-slate-600">{{ $cell }}</td>
                             @endforeach
                         </tr>
                     @endforeach

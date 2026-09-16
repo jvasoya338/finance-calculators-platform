@@ -1,7 +1,7 @@
 @props(['name', 'field', 'value' => null])
 
-<div class="space-y-2">
-    <label for="{{ $name }}" class="text-sm font-semibold text-[#0B2A4A]">{{ $field['label'] }}</label>
+<div class="space-y-1.5">
+    <label for="{{ $name }}" class="block text-xs font-semibold uppercase tracking-wider text-slate-700">{{ $field['label'] }}</label>
 
     @if(($field['type'] ?? 'text') === 'select')
         <select
@@ -23,7 +23,7 @@
                 }
             @endphp
             @if(!empty($prefix))
-                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-sm text-[rgba(11,42,74,0.56)]">{{ $prefix }}</span>
+                <span class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-sm font-medium text-slate-400">{{ $prefix }}</span>
             @endif
             <input
                 id="{{ $name }}"
@@ -31,12 +31,12 @@
                 type="{{ $field['type'] ?? 'text' }}"
                 step="{{ $field['step'] ?? 'any' }}"
                 value="{{ old($name, $value) }}"
-                class="form-input {{ !empty($prefix) ? 'pl-9' : '' }}"
+                class="form-input {{ !empty($prefix) ? 'pl-8' : '' }}"
             >
         </div>
     @endif
 
     @error($name)
-        <p class="text-sm text-rose-300">{{ $message }}</p>
+        <p class="text-xs font-medium text-rose-600">{{ $message }}</p>
     @enderror
 </div>

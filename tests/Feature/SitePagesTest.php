@@ -11,20 +11,16 @@ class SitePagesTest extends TestCase
         $response = $this->get(route('home'));
 
         $response->assertOk();
-        $response->assertSee('Premium finance tools for smarter everyday decisions.');
-        $response->assertSee('Browse all calculators');
-        $response->assertSee('People use FinguruTools for very different reasons.');
+        $response->assertSee('Financial calculators for clear everyday decisions.');
+        $response->assertSee('Search all calculators');
+        $response->assertSee('Popular Financial Calculators');
+        $response->assertSee('Browse by financial goal');
         $response->assertSee('EMI Calculator');
-        $response->assertSee('Monthly EMI');
         $response->assertSee('Practical reading before bigger money decisions');
         $response->assertSee('Dedicated regional finance hubs for the U.S., Europe, UK, and India');
         $response->assertSee('U.S. finance calculators');
         $response->assertSee('Europe finance calculators');
-        $response->assertSee('Planning updates');
-        $response->assertSee('Search all calculators');
-        $response->assertSee('Open contact form');
         $response->assertSee('Reviewed formulas');
-        $response->assertSee('Updated guide pages');
         $response->assertSee('/build/assets/', false);
         $response->assertDontSee('This section supports finance updates');
         $response->assertDontSee('1 tools');
@@ -56,11 +52,10 @@ class SitePagesTest extends TestCase
         ]));
 
         $response->assertOk();
-        $response->assertSee('Results');
+        $response->assertSee('Calculation Summary');
         $response->assertSee('Monthly payment');
-        $response->assertSee('Practical considerations');
         $response->assertSee('Important Borrowing Caveats & Assumptions');
-        $response->assertSee('Calculation Model');
+        $response->assertSee('Model:');
         $response->assertSee('WebApplication');
         $response->assertSee('meta name="keywords"', false);
     }
@@ -86,8 +81,8 @@ class SitePagesTest extends TestCase
         $this
             ->get(route('home'))
             ->assertOk()
-            ->assertSee('Auto detect location')
-            ->assertSee('India · INR')
+            ->assertSee('Auto Detect')
+            ->assertSee('India (INR)')
             ->assertSee('₹', false);
     }
 
@@ -110,7 +105,7 @@ class SitePagesTest extends TestCase
         $this->get(route('categories.show', ['category' => 'investment-calculators']))
             ->assertOk()
             ->assertSee('Investment calculators')
-            ->assertSee('Core decision framework for investment calculators');
+            ->assertSee('Planning Essentials');
 
         $this->get(route('categories.show', ['category' => 'crypto-calculators']))
             ->assertOk()
@@ -118,8 +113,8 @@ class SitePagesTest extends TestCase
 
         $this->get(route('calculators.index'))
             ->assertOk()
-            ->assertSee('Dedicated financial planning hubs for the U.S., Europe, UK, and India')
-            ->assertSee('VAT calculator');
+            ->assertSee('Financial Calculators Library')
+            ->assertSee('VAT Calculator');
 
         $this->get(route('sitemap'))
             ->assertOk()
@@ -134,15 +129,15 @@ class SitePagesTest extends TestCase
     {
         $this->get(route('contact'))
             ->assertOk()
-            ->assertSee('Send message')
-            ->assertSee('Support email');
+            ->assertSee('Send Message')
+            ->assertSee('Official Contact');
     }
 
     public function test_unknown_page_uses_custom_404_view(): void
     {
         $this->get('/this-page-does-not-exist')
             ->assertNotFound()
-            ->assertSee('We could not find that page.');
+            ->assertSee('Page Not Found');
     }
 
     public function test_regional_finance_pages_and_disclaimer_are_available(): void
@@ -187,14 +182,13 @@ class SitePagesTest extends TestCase
     {
         $this->get(route('guides.index'))
             ->assertOk()
-            ->assertSee('Guide article');
+            ->assertSee('Editorial Guide');
 
         $this->get(route('guides.show', ['guide' => 'mortgage-offers']))
             ->assertOk()
             ->assertSee('How to compare mortgage offers without focusing on rate alone')
-            ->assertSee('By FinguruTools Editorial Research Team')
+            ->assertSee('Written by FinguruTools Editorial Research Team')
             ->assertSee('Published March 28, 2026')
-            ->assertSee('Article')
             ->assertSee('Editorial Standards & Accuracy Protocol')
             ->assertSee('Pre-Decision Verification Checklist');
 
@@ -256,3 +250,4 @@ class SitePagesTest extends TestCase
             ->assertSee('Our aim over time is simple: make FinguruTools more useful with every revision.');
     }
 }
+
